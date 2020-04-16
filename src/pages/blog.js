@@ -12,7 +12,7 @@ const Blog = props => {
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title="All posts" />
-      <div className="container">
+      <div className="container height-100">
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
