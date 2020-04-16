@@ -9,11 +9,8 @@ const header = ({
   setNavOpen,
   designTipsOpen,
   setDesignTipsOpen,
+  isAnyActive,
 }) => {
-  let isAnyActive
-  if (navOpen || designTipsOpen) {
-    isAnyActive = true
-  }
   function active() {
     if (navOpen) {
       setNavOpen(!navOpen)
@@ -31,17 +28,17 @@ const header = ({
   return (
     <nav
       className={`${
-        isAnyActive ? `sticky top-0` : ``
-      } py-4 md:py-6 container z-40 bg-white text-4xl`}
+        isAnyActive ? `sticky` : ``
+      } top-0 py-4 md:py-6 w-full z-10 bg-white text-4xl`}
     >
-      <div className="w-full flex justify-between items-center">
-        <div className={`flex items-center flex-shrink-0`}>
+      <div className="container w-full flex justify-between items-center">
+        <div>
           <Link
-            className={`text-2xl text-black-400`}
+            className={`text-3xl lg:text-4xl text-black-400 font-light emphasis`}
             to={`/`}
             onClick={() => (isAnyActive ? active() : ``)}
           >
-            {siteTitle}
+            NGUX
           </Link>
         </div>
         <div className="block lg:hidden">
@@ -126,7 +123,7 @@ const header = ({
               About
             </Link>
             <button
-              className={`lg:inline-block lg:px-6 lg:py-3 lg:text-white lg:bg-black-400 alt-border focus:outline-none focus:shadow-outline`}
+              className={`lg:inline-block lg:px-4 lg:py-3 lg:bg-white lg:border border-2 border-black-400 alt-border lg:hover:text-white lg:hover:bg-black-400 transition duration-300 focus:outline-none focus:shadow-outline`}
               onClick={() => setDesignTipsOpen(!designTipsOpen)}
             >
               Design Tips

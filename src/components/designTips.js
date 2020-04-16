@@ -9,13 +9,13 @@ const designTips = ({
   fluid,
 }) => {
   return (
-    <animated.section
+    <animated.article
       style={designTipsAnimation}
       className={`${
         designTipsOpen ? `design-tips` : `design-tips-animate`
       } bg-white`}
     >
-      <div
+      <section
         className={`mt-8 md:mt-12 lg:mt-16 container md:max-w-lg xl:max-w-xl h-screen md:text-center header-font`}
       >
         <Img
@@ -51,8 +51,8 @@ const designTips = ({
             Nah, I'll pass
           </button>
         </div>
-      </div>
-    </animated.section>
+      </section>
+    </animated.article>
   )
 }
 

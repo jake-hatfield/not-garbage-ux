@@ -12,6 +12,10 @@ const Layout = props => {
   const { children } = props
   const [navOpen, setNavOpen] = useState(false)
   const [designTipsOpen, setDesignTipsOpen] = useState(false)
+  let isAnyActive
+  if (navOpen || designTipsOpen) {
+    isAnyActive = true
+  }
   const navAnimation = useSpring({
     transform: navOpen ? `translate3d(0,0,0)` : `translate3d(100%,0,0)`,
     config: config.slow,
@@ -48,6 +52,7 @@ const Layout = props => {
         navAnimation={navAnimation}
         designTipsOpen={designTipsOpen}
         setDesignTipsOpen={setDesignTipsOpen}
+        isAnyActive={isAnyActive}
       />
       <DesignTips
         designTipsOpen={designTipsOpen}
@@ -55,7 +60,9 @@ const Layout = props => {
         designTipsAnimation={designTipsAnimation}
         fluid={data.designTipsImage.childImageSharp.fluid}
       />
-      <main siteTitle={data.site.siteMetadata.title}>{children}</main>
+      <main siteTitle={data.site.siteMetadata.title} isAnyActive={isAnyActive}>
+        {children}
+      </main>
       <Footer
         siteTitle={data.site.siteMetadata.title}
         designTipsOpen={designTipsOpen}

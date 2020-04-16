@@ -72,10 +72,10 @@
   -o-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
   text-decoration: none;
-  background-image: -webkit-linear-gradient(transparent 50%, #bec0c2 0%);
-  background-image: -moz-linear-gradient(transparent 50%, #bec0c2 0%);
-  background-image: -o-linear-gradient(transparent 50%, #bec0c2 0%);
-  background-image: linear-gradient(transparent 50%, #bec0c2 0%);
+  background-image: -webkit-linear-gradient(transparent 50%, #e2e8f0 0%);
+  background-image: -moz-linear-gradient(transparent 50%, #e2e8f0 0%);
+  background-image: -o-linear-gradient(transparent 50%, #e2e8f0 0%);
+  background-image: linear-gradient(transparent 50%, #e2e8f0 0%);
   background-size: 0 100%;
   background-repeat: no-repeat;
   /* border-bottom: 1px solid #33393f; */
@@ -93,17 +93,17 @@
 }
 
 .emphasis {
-  background-image: -webkit-linear-gradient(transparent 50%, #edf2f7 0%);
-  background-image: -moz-linear-gradient(transparent 50%, #edf2f7 0%);
-  background-image: -o-linear-gradient(transparent 50%, #edf2f7 0%);
-  background-image: linear-gradient(transparent 50%, #edf2f7 0%);
+  background-image: -webkit-linear-gradient(transparent 50%, #e2e8f0 0%);
+  background-image: -moz-linear-gradient(transparent 50%, #e2e8f0 0%);
+  background-image: -o-linear-gradient(transparent 50%, #e2e8f0 0%);
+  background-image: linear-gradient(transparent 50%, #e2e8f0 0%);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
 @media only screen and (max-width: 767px) {
   .height-100 {
-    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
   }
 }
 
@@ -257,6 +257,16 @@
 
 .alt-border {
   border-radius: 0.75rem;
+}
+
+@media only screen and (min-width: 1280px) {
+  .hero-image {
+    position: absolute;
+    top: 0px;
+    right: -500px;
+    max-width: 600px;
+    z-index: -1;
+  }
 }
 
 .textured-bg {
