@@ -1,88 +1,71 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { useState } from "react"
 import styled from "styled-components"
+import { useStaticQuery, graphql } from "gatsby"
+import { useSpring, config } from "react-spring"
+import "../styles/app.css"
 
-import { rhythm, scale } from "../utils/typography"
+import Header from "../components/header"
+import Footer from "../components/footer"
+import DesignTips from "../components/designTips"
 
-class Layout extends React.Component {
-  render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    const blogPath = `${__PATH_PREFIX__}/blog/`
-    let header
-
-    if (location.pathname === rootPath || location.pathname === blogPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={location.pathname === blogPath ? `/blog/` : `/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/blog/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
+const Layout = props => {
+  const { children } = props
+  const [navOpen, setNavOpen] = useState(false)
+  const [designTipsOpen, setDesignTipsOpen] = useState(false)
+  const navAnimation = useSpring({
+    transform: navOpen ? `translate3d(0,0,0)` : `translate3d(100%,0,0)`,
+    config: config.slow,
+  })
+  const designTipsAnimation = useSpring({
+    transform: designTipsOpen
+      ? `translate3d(0%,0,0)`
+      : `translate3d(-100%,0,0)`,
+    config: config.slow,
+  })
+  const data = useStaticQuery(graphql`
+    query essentialData {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+      designTipsImage: file(relativePath: { eq: "gatsby-icon.png" }) {
+        id
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
-    return (
-      <Wrapper>
-        <div
-          style={{
-            marginLeft: `auto`,
-            marginRight: `auto`,
-            maxWidth: rhythm(24),
-            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-          }}
-        >
-          <header>{header}</header>
-          <main>{children}</main>
-        </div>
-        <Footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </Footer>
-      </Wrapper>
-    )
-  }
+  `)
+  return (
+    <Wrapper>
+      <Header
+        siteTitle={data.site.siteMetadata.title}
+        navOpen={navOpen}
+        setNavOpen={setNavOpen}
+        navAnimation={navAnimation}
+        designTipsOpen={designTipsOpen}
+        setDesignTipsOpen={setDesignTipsOpen}
+      />
+      <DesignTips
+        designTipsOpen={designTipsOpen}
+        setDesignTipsOpen={setDesignTipsOpen}
+        designTipsAnimation={designTipsAnimation}
+        fluid={data.designTipsImage.childImageSharp.fluid}
+      />
+      <main siteTitle={data.site.siteMetadata.title}>{children}</main>
+      <Footer
+        siteTitle={data.site.siteMetadata.title}
+        designTipsOpen={designTipsOpen}
+        setDesignTipsOpen={setDesignTipsOpen}
+      />
+    </Wrapper>
+  )
 }
 
 const Wrapper = styled.div`
   min-height: 100vh;
 `
-
-const Footer = styled.footer`
-  text-align: center;
-  margin: 24px;
-`
-
 export default Layout
