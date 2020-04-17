@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import { useSpring, config } from "react-spring"
@@ -16,6 +16,20 @@ const Layout = props => {
   if (navOpen || designTipsOpen) {
     isAnyActive = true
   }
+  // if (isAnyActive) {
+  //   document.body.style.overflow = "hidden"
+  // } else {
+  //   document.body.style.overflow = "scroll"
+  // }
+  useEffect(() => {
+    if (isAnyActive) {
+      console.log("its working")
+      document.body.style.overflowY = "hidden"
+      document.body.style.height = "100vh"
+      document.body.style.width = "100vw"
+    }
+    return () => (document.body.style.overflowY = "unset")
+  }, [isAnyActive])
   const navAnimation = useSpring({
     transform: navOpen ? `translate3d(0,0,0)` : `translate3d(100%,0,0)`,
     config: config.slow,
@@ -74,5 +88,6 @@ const Layout = props => {
 
 const Wrapper = styled.div`
   min-height: 100vh;
+  overflow-x: hidden;
 `
 export default Layout

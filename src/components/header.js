@@ -28,8 +28,8 @@ const header = ({
   return (
     <nav
       className={`${
-        isAnyActive ? `sticky` : ``
-      } top-0 py-4 md:py-6 w-full z-10 bg-white text-4xl`}
+        isAnyActive ? `` : ``
+      } py-4 md:py-6 w-full bg-white text-4xl`}
     >
       <div className="container w-full flex justify-between items-center">
         <div>
@@ -123,7 +123,7 @@ const header = ({
               About
             </Link>
             <button
-              className={`lg:inline-block lg:px-4 lg:py-3 lg:bg-white lg:border border-2 border-black-400 alt-border lg:hover:text-white lg:hover:bg-black-400 transition duration-300 focus:outline-none focus:shadow-outline`}
+              className={`lg:inline-block lg:px-4 lg:py-3 lg:bg-white lg:border border-2 border-black-400 relative z-20 alt-border lg:hover:text-white lg:hover:bg-black-400 transition duration-300 focus:outline-none focus:shadow-outline`}
               onClick={() => setDesignTipsOpen(!designTipsOpen)}
             >
               Design Tips
