@@ -20,9 +20,9 @@ const IndexPage = siteTitle => {
               <span className="emphasis">garbage UX</span>
             </h1>
             <h2 className="mt-8 text-xl text-black-400 leading-relaxed">
-              You're wasting time with unnecessary, unusable design.
+              You're wasting time with unnecessary & unusable design.
             </h2>
-            <h3 className="mt-4 text-lg leading-relaxed">
+            <h3 className="mt-4 lg:max-w-lg text-lg leading-relaxed">
               Learn how to solve user experience problems that top companies{" "}
               <span className="emphasis">actually</span> care about.
             </h3>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import { useSpring, config } from "react-spring"
@@ -16,17 +16,6 @@ const Layout = props => {
   if (navOpen || designTipsOpen) {
     isAnyActive = true
   }
-
-  // window.addEventListener("resize", function() {
-  //   if (
-  //     document.activeElement.tagName === "INPUT" ||
-  //     document.activeElement.tagName === "TEXTAREA"
-  //   ) {
-  //     window.setTimeout(function() {
-  //       document.activeElement.scrollIntoViewIfNeeded()
-  //     }, 0)
-  //   }
-  // })
 
   // useEffect(() => {
   //   if (isAnyActive) {
