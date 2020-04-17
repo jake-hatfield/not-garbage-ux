@@ -9,7 +9,7 @@ const IndexPage = siteTitle => {
     <Layout title={siteTitle}>
       <SEO title="Home" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
       <article className="height-100 mb-16 w-full md:flex lg:flex-col lg:justify-center lg:items-start">
-        <header className="container relative negative-z">
+        <header className="container relative z-0">
           <section className="xl:max-w-2xl">
             <div>
               <Image className="hero-image" />

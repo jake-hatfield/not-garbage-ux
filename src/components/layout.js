@@ -27,6 +27,11 @@ const Layout = props => {
       document.body.style.overflowY = "hidden"
       document.body.style.height = "100vh"
       document.body.style.width = "100vw"
+    } else if (
+      document.activeElement.tagName === "INPUT" ||
+      document.activeElement.tagName === "TEXTAREA"
+    ) {
+      document.body.style.overflowY = "unset"
     }
     return () => (document.body.style.overflowY = "unset")
   }, [isAnyActive])
