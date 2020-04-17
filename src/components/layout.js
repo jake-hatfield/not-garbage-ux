@@ -29,14 +29,14 @@ const Layout = props => {
   // })
 
   useEffect(() => {
-    if (isAnyActive) {
+    if (navOpen) {
       console.log("its working")
       document.body.style.overflowY = "hidden"
       document.body.style.height = "100vh"
       document.body.style.width = "100vw"
     }
     return () => (document.body.style.overflowY = "unset")
-  }, [isAnyActive])
+  }, [navOpen])
   const navAnimation = useSpring({
     transform: navOpen ? `translate3d(0,0,0)` : `translate3d(100%,0,0)`,
     config: config.slow,
