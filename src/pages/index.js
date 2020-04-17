@@ -2,7 +2,8 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Image from "../../content/assets/hero-image.svg"
+import HeroImage from "../../content/assets/hero-image.svg"
+import IconCheck from "../../content/assets/icon-check.svg"
 
 const IndexPage = siteTitle => {
   return (
@@ -12,17 +13,19 @@ const IndexPage = siteTitle => {
         <header className="container relative z-0">
           <section className="mx-auto lg:m-0 md:max-w-lg lg:max-w-xl xl:max-w-2xl">
             <div className="">
-              <Image className="hero-image" />
+              <HeroImage className="hero-image" />
             </div>
             <h1 className="mt-8 lg:mt-0 text-3xl md:text-4xl lg:text-5xl text-black-400 font-black">
               Incredible design that doesn't solve a problem is{" "}
               <span className="emphasis">garbage UX</span>
             </h1>
-            <h2 className="mt-8 text-lg lg:max-w-2xl leading-relaxed">
-              You're wasting time with unnecessary, unusable design. <br />{" "}
+            <h2 className="mt-8 text-xl text-black-400 leading-relaxed">
+              You're wasting time with unnecessary, unusable design.
+            </h2>
+            <h3 className="mt-4 text-lg leading-relaxed">
               Learn how to solve user experience problems that top companies{" "}
               <span className="emphasis">actually</span> care about.
-            </h2>
+            </h3>
             <form action="" className="mt-12 md:max-w-lg md:relative">
               <input
                 placeholder="Enter your email"
@@ -37,14 +40,23 @@ const IndexPage = siteTitle => {
                 Learn not garbage UX
               </button>
             </form>
-            <aside className="md:max-w-lg md:flex md:justify-between ">
-              <h3 className="md:inline-block body-font">
-                Tactical design tips
-              </h3>
-              <h3 className="md:inline-block body-font">UX positioning</h3>
-              <h3 className="md:inline-block body-font">
-                Crystal-clear product strategy
-              </h3>
+            <aside className="md:max-w-lg">
+              <div className="items-center">
+                <IconCheck className="h-6 w-6 inline-block" />{" "}
+                <h3 className="ml-4 inline-block body-font">
+                  Crystal-clear product strategy
+                </h3>
+              </div>
+              <div className="mt-3 flex items-center">
+                <IconCheck className="h-6 w-6 inline-block" />{" "}
+                <h3 className="ml-4 inline-block body-font">
+                  Tactical design tips
+                </h3>
+              </div>
+              <div className="mt-3 flex items-center">
+                <IconCheck className="h-6 w-6 inline-block" />{" "}
+                <h3 className="ml-4 inline-block body-font">UX positioning</h3>
+              </div>
             </aside>
           </section>
         </header>
