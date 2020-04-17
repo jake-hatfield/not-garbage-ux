@@ -16,22 +16,24 @@ const Layout = props => {
   if (navOpen || designTipsOpen) {
     isAnyActive = true
   }
-  // if (isAnyActive) {
-  //   document.body.style.overflow = "hidden"
-  // } else {
-  //   document.body.style.overflow = "scroll"
-  // }
+
+  window.addEventListener("resize", function() {
+    if (
+      document.activeElement.tagName === "INPUT" ||
+      document.activeElement.tagName === "TEXTAREA"
+    ) {
+      window.setTimeout(function() {
+        document.activeElement.scrollIntoViewIfNeeded()
+      }, 0)
+    }
+  })
+
   useEffect(() => {
     if (isAnyActive) {
       console.log("its working")
       document.body.style.overflowY = "hidden"
       document.body.style.height = "100vh"
       document.body.style.width = "100vw"
-    } else if (
-      document.activeElement.tagName === "INPUT" ||
-      document.activeElement.tagName === "TEXTAREA"
-    ) {
-      document.body.style.overflowY = "unset"
     }
     return () => (document.body.style.overflowY = "unset")
   }, [isAnyActive])
