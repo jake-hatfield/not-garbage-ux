@@ -26,11 +26,7 @@ const header = ({
   }
 
   return (
-    <nav
-      className={`${
-        designTipsOpen ? `fixed top-0` : ``
-      } py-4 md:py-6 w-full z-10 bg-white text-4xl`}
-    >
+    <nav className={`py-4 md:py-6 w-full z-10 bg-white text-4xl`}>
       <div className="container w-full flex justify-between items-center">
         <div>
           <Link
