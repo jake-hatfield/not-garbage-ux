@@ -8,10 +8,10 @@ const IndexPage = siteTitle => {
   return (
     <Layout title={siteTitle}>
       <SEO title="Home" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
-      <article className="height-100 mb-16 w-full md:flex lg:flex-col lg:justify-center lg:items-start">
+      <article className="height-100 mb-16 w-full md:flex md:items-center lg:flex-col lg:justify-center lg:items-start">
         <header className="container relative z-0">
-          <section className="xl:max-w-2xl">
-            <div>
+          <section className="mx-auto lg:m-0 md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+            <div className="">
               <Image className="hero-image" />
             </div>
             <h1 className="mt-8 lg:mt-0 text-3xl md:text-4xl lg:text-5xl text-black-400 font-black">
