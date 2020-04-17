@@ -16,10 +16,10 @@ const designTips = ({
       } bg-white`}
     >
       <section
-        className={`mt-8 md:mt-12 lg:mt-16 container md:max-w-lg xl:max-w-xl h-screen md:text-center header-font`}
+        className={`md:mt-12 lg:mt-16 container md:max-w-lg xl:max-w-xl h-screen md:text-center header-font`}
       >
         <Img
-          className="mx-auto block h-32 w-32 md:h-48 md:w-48 lg:h-56 lg:w-56"
+          className="mx-auto block h-24 w-24 md:h-48 md:w-48 lg:h-56 lg:w-56"
           fluid={fluid}
         />
         <div className="mt-8">

@@ -38,9 +38,11 @@ const IndexPage = siteTitle => {
               </button>
             </form>
             <aside className="md:max-w-lg md:flex md:justify-between ">
-              <h3 className="inline-block body-font">Tactical design tips</h3>
-              <h3 className="inline-block body-font">UX positioning</h3>
-              <h3 className="inline-block body-font">
+              <h3 className="md:inline-block body-font">
+                Tactical design tips
+              </h3>
+              <h3 className="md:inline-block body-font">UX positioning</h3>
+              <h3 className="md:inline-block body-font">
                 Crystal-clear product strategy
               </h3>
             </aside>

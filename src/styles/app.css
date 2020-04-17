@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  overflow-x: hidden;
+@media only screen and (min-width: 1024px) {
+  html {
+    overflow-x: hidden;
+  }
 }
 
 .header-font {
-  font-family: Raleway;
+  font-family: Raleway !important;
 }
 
 .body-font {
