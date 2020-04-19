@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Image from "gatsby-image"
 
 const Blog = props => {
   const { data } = props
@@ -12,7 +13,7 @@ const Blog = props => {
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title="All posts" />
-      <section className="container height-100">
+      <section className="container height-100 max-w-2xl">
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -26,6 +27,10 @@ const Blog = props => {
                 </Link>
               </h2>
               <small>{node.frontmatter.date}</small>
+              <Image
+                className="h-64 alt-border"
+                fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
+              />
               <p
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
@@ -59,6 +64,14 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            featuredImage {
+              id
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
