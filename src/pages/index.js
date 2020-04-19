@@ -31,6 +31,7 @@ const IndexPage = siteTitle => {
                 placeholder="Enter your email"
                 name="email"
                 type="text"
+                required
                 className="p-3 md:p-4 w-full bg-gray-200 alt-border focus:outline-none focus:shadow-outline"
               />
               <button
