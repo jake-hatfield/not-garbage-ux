@@ -13,42 +13,40 @@ const Blog = props => {
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title="All posts" />
-      <section className="container height-alt max-w-3xl">
+      <section className="mt-8 lg:mt-16 container height-100 md:max-w-xl lg:max-w-3xl">
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
-            <article key={node.fields.slug}>
-              <h2 className="mt-8 lg:mt-0 text-3xl md:text-4xl text-black-400 font-black">
-                <Link to={`blog${node.fields.slug}`}>{title}</Link>
-              </h2>
-              <div className="mt-6 flex body-font font-light text-gray-600">
-                <address className="mb-0 not-italic">
-                  <Link to={`/about`} rel="author">
-                    {node.frontmatter.author}
-                  </Link>
-                </address>
-                <time pubdate={node.frontmatter.date} className="ml-4">
-                  Last updated: {node.frontmatter.date}
-                </time>
+            <article key={node.fields.slug} className="mb-12 lg:mb-24">
+              <div className="flex flex-col flex-col-reverse lg:flex-col">
+                <div>
+                  <h2 className="mt-4 lg:mt-0 text-2xl md:text-4xl text-black-400 font-black">
+                    <Link to={`blog${node.fields.slug}`}>{title}</Link>
+                  </h2>
+                  <aside className="mt-2 lg:mt-4 flex flex-wrap body-font font-light text-sm md:text-base text-gray-600">
+                    <address className="mr-4 mb-0 not-italic">
+                      <Link to={`/about`} rel="author">
+                        {node.frontmatter.author}
+                      </Link>
+                    </address>
+                    <time pubdate={node.frontmatter.date}>
+                      Last updated: {node.frontmatter.date}
+                    </time>
+                  </aside>
+                </div>
+                <Link to={`blog${node.fields.slug}`}>
+                  <Image
+                    className="mt-4 h-48 lg:h-64 alt-border"
+                    fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
+                  />
+                </Link>
               </div>
-              <Link to={`blog${node.fields.slug}`}>
-                <Image
-                  className="mt-4 h-64 alt-border"
-                  fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
-                />
-              </Link>
               <p
-                className="mt-6 leading-relaxed text-gray-700"
+                className="mt-3 lg:mt-6 leading-relaxed text-gray-700"
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
                 }}
               />
-              <Link
-                to={`blog${node.fields.slug}`}
-                className="mt-4 md:mt-0 p-3 md:p-4 w-full md:w-auto bg-black-400 text-white text-lg md:text-base alt-border focus:outline-none focus:shadow-outline"
-              >
-                Continue Reading
-              </Link>
             </article>
           )
         })}
