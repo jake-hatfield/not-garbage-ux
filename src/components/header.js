@@ -109,7 +109,7 @@ const header = ({
           >
             <Link
               to={`/`}
-              className={`lg:mr-24 lg:inline-block alt-link`}
+              className={`lg:mr-24 lg:inline-block relative z-20 alt-link`}
               activeClassName="active"
               onClick={() => (isAnyActive ? active() : ``)}
             >
@@ -117,7 +117,7 @@ const header = ({
             </Link>
             <Link
               to={`/about`}
-              className={`lg:mr-24 lg:inline-block alt-link`}
+              className={`lg:mr-24 lg:inline-block relative z-20 alt-link`}
               activeClassName="active"
             >
               About
