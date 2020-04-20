@@ -119,13 +119,13 @@
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .height-100 {
-    height: calc(100vh - 96px);
+    min-height: calc(100vh - 96px);
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .height-100 {
-    height: calc(100vh - 102px);
+    min-height: calc(100vh - 102px);
   }
 }
 
@@ -304,6 +304,10 @@
     width: 800px;
     z-index: 2;
   }
+}
+
+.blog-hero-image {
+  max-height: 50vh;
 }
 
 .textured-bg {

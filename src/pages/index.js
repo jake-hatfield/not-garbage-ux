@@ -42,7 +42,8 @@ const IndexPage = siteTitle => {
               </button>
             </form>
             <aside className="md:max-w-lg">
-              <div className="items-center">
+              <p className="text-lg">These tips will help you learn:</p>
+              <div className="mt-3 flex items-center">
                 <IconCheck className="h-6 w-6 inline-block" />{" "}
                 <h3 className="ml-4 inline-block body-font">
                   Crystal-clear product strategy
@@ -51,7 +52,7 @@ const IndexPage = siteTitle => {
               <div className="mt-3 flex items-center">
                 <IconCheck className="h-6 w-6 inline-block" />{" "}
                 <h3 className="ml-4 inline-block body-font">
-                  Tactical design tips
+                  Tactical & practical design
                 </h3>
               </div>
               <div className="mt-3 flex items-center">

@@ -13,7 +13,7 @@ const Blog = props => {
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title="All posts" />
-      <section className="mt-8 lg:mt-16 container height-100 md:max-w-xl lg:max-w-3xl">
+      <section className="mt-8 lg:mt-16 container height-100 md:max-w-xl lg:max-w-2xl">
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -21,11 +21,13 @@ const Blog = props => {
               <div className="flex flex-col flex-col-reverse lg:flex-col">
                 <div>
                   <h2 className="mt-4 lg:mt-0 text-2xl md:text-4xl text-black-400 font-black">
-                    <Link to={`blog${node.fields.slug}`}>{title}</Link>
+                    <Link to={`blog${node.fields.slug}`} className="alt-link">
+                      {title}
+                    </Link>
                   </h2>
                   <aside className="mt-2 lg:mt-4 flex flex-wrap body-font font-light text-sm md:text-base text-gray-600">
                     <address className="mr-4 mb-0 not-italic">
-                      <Link to={`/about`} rel="author">
+                      <Link to={`/about`} rel="author" className="alt-link">
                         {node.frontmatter.author}
                       </Link>
                     </address>
