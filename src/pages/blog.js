@@ -44,7 +44,7 @@ const Blog = props => {
                 </Link>
               </div>
               <p
-                className="mt-3 lg:mt-6 leading-relaxed text-gray-700"
+                className="mt-3 lg:mt-6 leading-relaxed text-black-400"
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
                 }}

@@ -1,15 +1,24 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "gatsby-image"
+import { useSpring, animated } from "react-spring"
 
 const BlogPostTemplate = props => {
   const post = props.data.mdx
   const siteTitle = props.data.site.siteMetadata.title
   const { previous, next } = props.pageContext
+  const [sideBlog, setSideBlog] = useState(false)
+  const [additionalContent, setAdditionalContent] = useState(false)
+  const primaryFade = useSpring({
+    opacity: additionalContent ? 0 : 1,
+  })
+  const secondaryFade = useSpring({
+    opacity: additionalContent ? 1 : 0,
+  })
 
   return (
     <Layout location={props.location} title={siteTitle}>
@@ -22,12 +31,52 @@ const BlogPostTemplate = props => {
           className="blog-hero-image"
           fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
         />
-        <article className="mt-8 lg:mt-16 container md:max-w-xl lg:max-w-2xl">
-          <h1 className="mt-4 lg:mt-0 text-2xl md:text-4xl text-black-400 font-black">
+        <aside
+          className={`${
+            sideBlog ? `opacity-100` : `opacity-0`
+          } side-blog w-full transition-opacity ease-in-out duration-500`}
+        >
+          <div className="flex justify-center">
+            <div className="alt-container w-full">
+              <div className="side-blog-w relative">
+                <h2 className="text-lg text-gray-700 font-bold">
+                  Not Garbage UX
+                </h2>
+                <animated.div style={primaryFade} className="absolute">
+                  <h4 className="mt-2 body-font text-sm text-gray-600 leading-relaxed">
+                    Interested in {post.frontmatter.topic}?
+                  </h4>
+                  <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+                    There's tons more where this comes from.
+                  </p>
+                </animated.div>
+                <animated.div style={secondaryFade}>
+                  <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+                    Really, you should join our newsletter.
+                  </p>
+                  <h4 className="mt-2 body-font text-sm text-gray-600 leading-relaxed">
+                    We cover {post.frontmatter.topic} so thoroughly you might
+                    puke.
+                  </h4>
+                </animated.div>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <article className="mt-8 lg:mt-16 container md:max-w-xl lg:max-w-2xl relative">
+          <button className="mr-8" onClick={() => setSideBlog(!sideBlog)}>
+            Click
+          </button>
+          <button onClick={() => setAdditionalContent(!additionalContent)}>
+            Click 2
+          </button>
+          <h1 className="mt-4 lg:mt-0 text-3xl md:text-4xl text-black-400 font-black">
             {post.frontmatter.title}
           </h1>
-          <p>{post.frontmatter.description}</p>
-          <aside className="mt-8 flex flex-wrap justify-between body-font font-light text-sm md:text-base text-gray-600">
+          <h2 className="mt-6 text-xl text-gray-600">
+            {post.frontmatter.shortDescription}
+          </h2>
+          <aside className="mt-8 lg:flex lg:flex-wrap lg:justify-between lg:items-center body-font font-light text-sm md:text-base text-gray-600">
             <div className="flex items-center">
               <Image
                 fixed={props.data.avatar.childImageSharp.fixed}
@@ -42,7 +91,7 @@ const BlogPostTemplate = props => {
                 }}
               />
               <div className="ml-4">
-                <address className="mr-4 mb-0 not-italic text-gray-900">
+                <address className="mr-4 mb-0 not-italic text-gray-800">
                   <Link to={`/about`} rel="author" className="alt-link">
                     {post.frontmatter.author}
                   </Link>
@@ -52,7 +101,7 @@ const BlogPostTemplate = props => {
                 </time>
               </div>
             </div>
-            <div>
+            <div className="mt-4">
               <address className="mr-4 mb-0 not-italic">
                 <Link to={`/about`} rel="author" className="alt-link">
                   {post.frontmatter.author}
@@ -63,11 +112,13 @@ const BlogPostTemplate = props => {
               </time>
             </div>
           </aside>
-          <section className="mt-12 text-lg leading-relaxed">
+          <section
+            id="blog-body"
+            className="text-lg text-black-400 leading-relaxed"
+          >
             <MDXRenderer>{post.body}</MDXRenderer>
           </section>
           <hr />
-
           <ul
             style={{
               display: `flex`,
@@ -123,7 +174,9 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        shortDescription
         author
+        topic
         featuredImage {
           id
           childImageSharp {
