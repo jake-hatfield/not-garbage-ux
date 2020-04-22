@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import { animated } from "react-spring"
 
 const header = ({
-  siteTitle,
   navAnimation,
   navOpen,
   setNavOpen,

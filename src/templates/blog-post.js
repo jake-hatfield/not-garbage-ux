@@ -1,10 +1,13 @@
 import React, { useState } from "react"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import { MDXProvider } from "@mdx-js/react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "gatsby-image"
+import Divider from "../components/divider"
+import SocialShare from "../components/socialShare"
 import { useSpring, animated } from "react-spring"
 
 const BlogPostTemplate = props => {
@@ -19,6 +22,18 @@ const BlogPostTemplate = props => {
   const secondaryFade = useSpring({
     opacity: additionalContent ? 1 : 0,
   })
+  const topic = post.frontmatter.topic || `UX design`
+
+  const shortcodes = { Divider }
+  // alert(document.body.clientHeight)
+  // function getScrollPercent() {
+  //   var h = document.documentElement,
+  //     b = document.body,
+  //     st = "scrollTop",
+  //     sh = "scrollHeight"
+  //   return ((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100
+  // }
+  // console.log(getScrollPercent)
 
   return (
     <Layout location={props.location} title={siteTitle}>
@@ -44,7 +59,7 @@ const BlogPostTemplate = props => {
                 </h2>
                 <animated.div style={primaryFade} className="absolute">
                   <h4 className="mt-2 body-font text-sm text-gray-600 leading-relaxed">
-                    Interested in {post.frontmatter.topic}?
+                    Interested in {topic}?
                   </h4>
                   <p className="mt-2 text-sm text-gray-600 leading-relaxed">
                     There's tons more where this comes from.
@@ -55,8 +70,7 @@ const BlogPostTemplate = props => {
                     Really, you should join our newsletter.
                   </p>
                   <h4 className="mt-2 body-font text-sm text-gray-600 leading-relaxed">
-                    We cover {post.frontmatter.topic} so thoroughly you might
-                    puke.
+                    We cover {topic} & more so thoroughly you might puke.
                   </h4>
                 </animated.div>
               </div>
@@ -76,7 +90,7 @@ const BlogPostTemplate = props => {
           <h2 className="mt-6 text-xl text-gray-600">
             {post.frontmatter.shortDescription}
           </h2>
-          <aside className="mt-8 lg:flex lg:flex-wrap lg:justify-between lg:items-center body-font font-light text-sm md:text-base text-gray-600">
+          <aside className="mt-8 lg:flex lg:flex-wrap lg:justify-between lg:items-end body-font font-light text-sm md:text-base text-gray-600">
             <div className="flex items-center">
               <Image
                 fixed={props.data.avatar.childImageSharp.fixed}
@@ -101,24 +115,21 @@ const BlogPostTemplate = props => {
                 </time>
               </div>
             </div>
-            <div className="mt-4">
-              <address className="mr-4 mb-0 not-italic">
-                <Link to={`/about`} rel="author" className="alt-link">
-                  {post.frontmatter.author}
-                </Link>
-              </address>
-              <time pubdate={post.frontmatter.date}>
-                Last updated: {post.frontmatter.date}
-              </time>
+            <div className="mt-6 lg:mt-0">
+              <SocialShare
+                url={`${props.data.site.siteMetadata.siteUrl}/blog${post.fields.slug}`}
+                title={post.frontmatter.title}
+              />
             </div>
+            <section
+              id="blog-body"
+              className="text-lg text-black-400 leading-relaxed"
+            >
+              <MDXProvider components={shortcodes}>
+                <MDXRenderer title={`Title`}>{post.body}</MDXRenderer>
+              </MDXProvider>
+            </section>
           </aside>
-          <section
-            id="blog-body"
-            className="text-lg text-black-400 leading-relaxed"
-          >
-            <MDXRenderer>{post.body}</MDXRenderer>
-          </section>
-          <hr />
           <ul
             style={{
               display: `flex`,
@@ -143,6 +154,7 @@ const BlogPostTemplate = props => {
               )}
             </li>
           </ul>
+          <hr />
         </article>
       </section>
     </Layout>
@@ -157,6 +169,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        siteUrl
       }
     }
     avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
@@ -170,6 +183,9 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       body
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")

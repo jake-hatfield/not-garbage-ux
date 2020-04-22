@@ -4,7 +4,7 @@ module.exports = {
     title: `Not Garbage UX`,
     author: `Kyle Matthews`,
     description: `A starter personal blog with styled components, dark mode, and Netlify CMS.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://notgarbageux.netlify.app/`,
     social: {
       twitter: `kylemathews`,
     },
