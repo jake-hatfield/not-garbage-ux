@@ -123,7 +123,7 @@ const BlogPostTemplate = props => {
             </div>
             <section
               id="blog-body"
-              className="text-lg text-black-400 leading-relaxed"
+              className="text-lg text-gray-900 leading-relaxed"
             >
               <MDXProvider components={shortcodes}>
                 <MDXRenderer title={`Title`}>{post.body}</MDXRenderer>

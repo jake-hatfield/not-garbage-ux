@@ -26,9 +26,10 @@ const designTips = ({
           <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold">
             Want the inside scoop?
           </h3>
-          <p className="mt-4 body-font text-lg lg:text-xl">
+          <p className="mt-4 body-font text-lg lg:text-lg text-gray-600">
             We make it rain on your inbox with weekly UX design tips and case
-            studies not found on the blog.
+            studies not found on the blog. No freebies, limited time offers, or
+            spam - just one article a week.
           </p>
           <form action="" className="mt-4 md:relative">
             <input
@@ -47,7 +48,7 @@ const designTips = ({
           </form>
           <button
             onClick={() => setDesignTipsOpen(!designTipsOpen)}
-            className="hidden lg:block mx-auto body-font text-lg alt-link"
+            className="lg:mt-4 mx-auto w-full body-font text-lg text-gray-800 alt-link"
           >
             Nah, I'll pass
           </button>
