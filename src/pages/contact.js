@@ -14,9 +14,12 @@ const contact = () => {
               Contact me
             </h1>
             <p className="mt-8 text-xl lg:text-2xl text-gray-600 leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Reiciendis maiores repellendus totam tenetur quas excepturi beatae
-              culpa sunt. Quod, fuga.
+              Reach out if you wanna watch crappy movies, play Nintendo games,
+              and drink IPAs together. Oh, also if you have a question or
+              article request about UX design.
+            </p>
+            <p className="mt-8 text-xl lg:text-2xl text-gray-600 leading-relaxed">
+              Priorities.
             </p>
           </header>
           <div className="mt-8 lg:mt-0 p-4 md:py-6 md:px-8 lg:py-12 lg:px-16 w-full lg:w-7/12 z-10 bg-white border-t-8 border-black-400 double-shadow">

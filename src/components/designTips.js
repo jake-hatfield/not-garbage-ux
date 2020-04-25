@@ -48,7 +48,7 @@ const designTips = ({
           </form>
           <button
             onClick={() => setDesignTipsOpen(!designTipsOpen)}
-            className="lg:mt-4 mx-auto w-full body-font text-lg text-gray-800 alt-link"
+            className="lg:mt-4 mx-auto body-font text-lg text-gray-800 alt-link"
           >
             Nah, I'll pass
           </button>

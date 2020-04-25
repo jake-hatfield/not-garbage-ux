@@ -47,19 +47,19 @@ const Blog = props => {
                   __html: node.frontmatter.description || node.excerpt,
                 }}
               />
-              <hr className="mt-4 hidden md:block rounded-lg border border-2 border-solid border-gray-200" />
-              <div className="mt-3 md:flex md:items-center md:justify-end">
-                {/* <p className="mr-16 p-3 md:p-4 w-1/4 h-full flex items-center bg-gray-400 alt-border">
+              {/* <hr className="mt-4 hidden md:block rounded-lg border border-2 border-solid border-gray-200" /> */}
+              {/* <div className="mt-3 md:flex md:items-center md:justify-end">
+                <p className="mr-16 p-3 md:p-4 w-1/4 h-full flex items-center bg-gray-400 alt-border">
                   <span className="mr-4 text-black-400 font-bold">3</span>{" "}
                   comments
-                </p> */}
+                </p>
                 <Link
                   to={`blog${node.fields.slug}`}
                   className="p-3 md:p-4 inline-block w-full md:w-1/3 text-center bg-black-400 text-white text-lg alt-border focus:outline-none focus:shadow-outline"
                 >
                   Read more
                 </Link>
-              </div>
+              </div> */}
             </article>
           )
         })}

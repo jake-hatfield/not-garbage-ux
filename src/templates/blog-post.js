@@ -46,7 +46,7 @@ const BlogPostTemplate = props => {
           className="blog-hero-image"
           fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
         />
-        <aside
+        {/* <aside
           className={`${
             sideBlog ? `opacity-100` : `opacity-0`
           } side-blog w-full transition-opacity ease-in-out duration-500`}
@@ -76,14 +76,14 @@ const BlogPostTemplate = props => {
               </div>
             </div>
           </div>
-        </aside>
+        </aside> */}
         <article className="mt-8 lg:mt-16 container md:max-w-xl lg:max-w-2xl relative">
-          <button className="mr-8" onClick={() => setSideBlog(!sideBlog)}>
+          {/* <button className="mr-8" onClick={() => setSideBlog(!sideBlog)}>
             Click
           </button>
           <button onClick={() => setAdditionalContent(!additionalContent)}>
             Click 2
-          </button>
+          </button> */}
           <h1 className="mt-4 lg:mt-0 text-3xl md:text-4xl text-black-400 font-black">
             {post.frontmatter.title}
           </h1>
@@ -119,6 +119,8 @@ const BlogPostTemplate = props => {
               <SocialShare
                 url={`${props.data.site.siteMetadata.siteUrl}/blog${post.fields.slug}`}
                 title={post.frontmatter.title}
+                twitterTags={post.frontmatter.twitterTags}
+                siteUrl={props.data.site.siteMetadata.siteUrl}
               />
             </div>
             <section
@@ -193,6 +195,7 @@ export const pageQuery = graphql`
         shortDescription
         author
         topic
+        twitterTags
         featuredImage {
           id
           childImageSharp {

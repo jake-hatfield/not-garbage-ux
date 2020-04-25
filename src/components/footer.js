@@ -39,7 +39,7 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
                   </button>
                 </div>
                 <div className="pt-4 text-lg text-black-100 hover:text-white transition duration-300">
-                  <Link to={`/contact`}>Work</Link>
+                  <Link to={`/saas-web-development`}>Work</Link>
                 </div>
               </div>
             </div>

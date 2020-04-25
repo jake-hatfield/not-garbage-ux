@@ -10,10 +10,13 @@ import {
   RedditIcon,
 } from "react-share"
 
-const socialShare = ({ twitterHandle, url, title, tags }) => {
+const socialShare = ({ siteUrl, url, title, twitterTags }) => {
   return (
     <section>
-      <FacebookShareButton url={url}>
+      <FacebookShareButton
+        url={url}
+        className="focus:outline-none focus:shadow-outline"
+      >
         <FacebookIcon
           size={32}
           round={true}
@@ -21,7 +24,12 @@ const socialShare = ({ twitterHandle, url, title, tags }) => {
           iconFillColor={`#2d3748`}
         />
       </FacebookShareButton>
-      <TwitterShareButton url={url} title={title} className="ml-4">
+      <TwitterShareButton
+        url={url}
+        title={title}
+        hashtags={twitterTags}
+        className="ml-4 focus:outline-none focus:shadow-outline"
+      >
         <TwitterIcon
           size={32}
           round={true}
@@ -29,7 +37,12 @@ const socialShare = ({ twitterHandle, url, title, tags }) => {
           iconFillColor={`#2d3748`}
         />
       </TwitterShareButton>
-      <LinkedinShareButton url={url} title={title} className="ml-4">
+      <LinkedinShareButton
+        url={url}
+        source={siteUrl}
+        title={title}
+        className="ml-4 focus:outline-none focus:shadow-outline"
+      >
         <LinkedinIcon
           size={32}
           round={true}
@@ -37,7 +50,11 @@ const socialShare = ({ twitterHandle, url, title, tags }) => {
           iconFillColor={`#2d3748`}
         />
       </LinkedinShareButton>
-      <RedditShareButton url={url} title={title} className="ml-4">
+      <RedditShareButton
+        url={url}
+        title={title}
+        className="ml-4 focus:outline-none focus:shadow-outline"
+      >
         <RedditIcon
           size={32}
           round={true}
