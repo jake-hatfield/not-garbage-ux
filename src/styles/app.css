@@ -5,6 +5,7 @@
 @media only screen and (min-width: 1024px) {
   html {
     overflow-x: hidden;
+    color: #2d3748;
   }
 }
 
@@ -351,12 +352,104 @@ h6 > {
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .saas-hero-image {
+    position: static;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .saas-hero-image {
+    position: static;
+    height: 80%;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .saas-hero-image {
+    position: absolute;
+    top: -50px;
+    right: -300px;
+    left: auto;
+    bottom: auto;
+    width: 800px;
+    overflow-x: hidden;
+    z-index: 2;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .tech-image {
+    position: static;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .tech-image {
+    position: static;
+    height: 80%;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  .tech-image {
+    position: absolute;
+    bottom: 0px;
+    left: 120px;
+    top: auto;
+    width: 800px;
+    z-index: 0;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .tech-image {
+    position: absolute;
+    bottom: 0px;
+    left: 200px;
+    top: auto;
+    width: 800px;
+    z-index: 0;
+  }
+}
+
 .blog-hero-image {
   max-height: 45vh;
 }
 
 .saas-sticky-image {
   top: 20vh;
+}
+
+.counter-reset {
+  counter-reset: step;
+}
+
+.counter {
+  counter-increment: step;
+}
+
+#next-steps::before {
+  background: #cbd5e0;
+  border-radius: 50%;
+  color: #2d3748;
+  content: counter(step);
+  display: inline-block;
+  font-size: 0.618em;
+  line-height: 1.618em;
+  margin-right: 0.75rem;
+  position: relative;
+  text-align: center;
+  top: -0.236em;
+  width: 1.618em;
 }
 
 .textured-bg {

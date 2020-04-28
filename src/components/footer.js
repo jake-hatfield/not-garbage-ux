@@ -50,7 +50,7 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
         </div>
         <footer className="mt-8 md:mt-6 md:flex md:justify-between md:items-center text-lg text-black-200">
           <div>
-            © {new Date().getFullYear()} {siteTitle}
+            © {new Date().getFullYear()} {siteTitle} | Be chill and don't steal
           </div>
           <div className="mt-2 md:mt-0">
             <a href="/sitemap.xml">Sitemap</a>

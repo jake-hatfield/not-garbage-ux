@@ -46,12 +46,14 @@ const designTips = ({
               Learn not garbage UX
             </button>
           </form>
-          <button
-            onClick={() => setDesignTipsOpen(!designTipsOpen)}
-            className="lg:mt-4 mx-auto body-font text-lg text-gray-800 alt-link"
-          >
-            Nah, I'll pass
-          </button>
+          <div className="text-center">
+            <button
+              onClick={() => setDesignTipsOpen(!designTipsOpen)}
+              className="lg:mt-4 mx-auto body-font text-lg text-gray-800 alt-link"
+            >
+              Nah, I'll pass
+            </button>
+          </div>
         </div>
       </section>
     </animated.article>
