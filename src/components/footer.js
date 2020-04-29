@@ -22,7 +22,7 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
                   <Link to={`/`}>Home</Link>
                 </div>
                 <div className="pt-4 text-lg text-black-100 hover:text-white transition duration-300">
-                  <Link to={`/about`}>About</Link>
+                  <Link to={`/saas-web-development`}>Work</Link>
                 </div>
                 <div className="pt-4 text-lg text-black-100 hover:text-white transition duration-300">
                   <Link to={`/contact`}>Contact</Link>
@@ -39,7 +39,7 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
                   </button>
                 </div>
                 <div className="pt-4 text-lg text-black-100 hover:text-white transition duration-300">
-                  <Link to={`/saas-web-development`}>Work</Link>
+                  <Link to={`/about`}>About</Link>
                 </div>
               </div>
             </div>
@@ -53,7 +53,7 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
             © {new Date().getFullYear()} {siteTitle} | Be chill and don't steal
           </div>
           <div className="mt-2 md:mt-0">
-            <a href="/sitemap.xml">Sitemap</a>
+            <a href="sitemap.xml">Sitemap</a>
             <Link to={`/privacy`} className="ml-12 md:ml-24">
               Privacy
             </Link>

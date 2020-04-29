@@ -148,6 +148,26 @@ h6 > {
   background-size: 100% 100%;
 }
 
+.text-alt-link {
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -ms-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  text-decoration: none;
+  background-image: -webkit-linear-gradient(transparent 50%, #e2e8f0 0%);
+  background-image: -moz-linear-gradient(transparent 50%, #e2e8f0 0%);
+  background-image: -o-linear-gradient(transparent 50%, #e2e8f0 0%);
+  background-image: linear-gradient(transparent 50%, #e2e8f0 0%);
+  background-size: 0 100%;
+  border-bottom: 2px solid#e2e8f0;
+  background-repeat: no-repeat;
+}
+
+.text-alt-link:hover {
+  background-size: 100% 100%;
+}
+
 @media only screen and (min-width: 1024px) {
   .active {
     background-size: 100% 100%;
@@ -425,8 +445,10 @@ h6 > {
   max-height: 45vh;
 }
 
-.saas-sticky-image {
-  top: 20vh;
+@media only screen and (min-width: 1024px) {
+  .saas-sticky-image {
+    top: 20vh;
+  }
 }
 
 .counter-reset {
@@ -440,7 +462,7 @@ h6 > {
 #next-steps::before {
   background: #cbd5e0;
   border-radius: 50%;
-  color: #2d3748;
+  color: #050505;
   content: counter(step);
   display: inline-block;
   font-size: 0.618em;

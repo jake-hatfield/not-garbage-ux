@@ -31,7 +31,7 @@ const header = ({
       } py-4 md:py-6 w-full z-20 bg-white text-4xl`}
     >
       <div className="container w-full flex justify-between items-center">
-        <div>
+        <div className="relative z-10">
           <Link
             className={`text-3xl lg:text-4xl text-black-400 font-light emphasis`}
             to={`/`}

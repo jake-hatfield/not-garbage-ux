@@ -14,9 +14,9 @@ const contact = () => {
               Contact me
             </h1>
             <p className="mt-8 text-xl lg:text-2xl text-gray-600 leading-relaxed">
-              Reach out if you wanna watch crappy movies, play Nintendo games,
-              and drink IPAs together. Oh, also if you have a question or
-              article request about UX design.
+              Reach out if you wanna watch B movies, play Nintendo games, and
+              drink IPAs together. Oh, also if you have a question or article
+              request about UX design.
             </p>
             <p className="mt-8 text-xl lg:text-2xl text-gray-600 leading-relaxed">
               Priorities.
