@@ -1,8 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Calendly from "../components/calendly"
 import IconCheck from "../../content/assets/icon-check.svg"
 import IconCode from "../../content/assets/icon-code.svg"
 import IconEdit from "../../content/assets/icon-edit.svg"
@@ -20,6 +21,7 @@ import BlobMiddle from "../../content/assets/blob-middle.svg"
 import BlobRight from "../../content/assets/blob-right.svg"
 
 const IndexPage = siteTitle => {
+  const [calendlyActive, setCalendlyActive] = useState(false)
   return (
     <Layout title={siteTitle}>
       <SEO title="Home" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
@@ -288,10 +290,24 @@ const IndexPage = siteTitle => {
             <button
               type="submit"
               className="p-3 md:p-4 w-full md:w-auto bg-black-400 text-white text-lg md:text-base alt-border focus:outline-none focus:shadow-outline"
+              onClick={() => setCalendlyActive(!calendlyActive)}
             >
               Book a clarity call
             </button>
           </div>
+          {/* <div style={{ height: "500px" }}>
+            <iframe
+              src="https://calendly.com/jake-hatfield/saas-clarity-call?text_color=040404&primary_color=040404"
+              width="100%"
+              height="100%"
+              frameborder="0"
+            ></iframe>
+          </div> */}
+          <Calendly
+            account="jake-hatfield"
+            eventName="saas-clarity-call"
+            calendlyActive={calendlyActive}
+          />
         </section>
       </section>
     </Layout>
