@@ -1,11 +1,17 @@
-import React from "react"
+import React, { useState } from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import EmailInput from "../components/emailInput"
+import VisibilitySensor from "react-visibility-sensor"
+import { animated, useSpring } from "react-spring"
 import HeroImage from "../../content/assets/hero-image.svg"
 import IconCheck from "../../content/assets/icon-check.svg"
 
-const IndexPage = siteTitle => {
+const IndexPage = ({ siteTitle }) => {
+  const isVisible = useState(false)
+  const fade = useSpring({ opacity: isVisible ? 1 : 0, delay: 300 })
+
   return (
     <Layout title={siteTitle}>
       <SEO title="Home" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
@@ -13,10 +19,17 @@ const IndexPage = siteTitle => {
         <header className="container relative z-0">
           <section className="mx-auto lg:m-0 md:max-w-lg lg:max-w-xl xl:max-w-2xl">
             <HeroImage className="hero-image" />
-            <h1 className="mt-8 lg:mt-0 text-3xl md:text-4xl lg:text-5xl text-black-400 font-black">
-              Incredible design that doesn't solve a problem is{" "}
-              <span className="emphasis">garbage UX</span>
-            </h1>
+            <VisibilitySensor>
+              {({ isVisible }) => (
+                <animated.h1
+                  className="mt-8 lg:mt-0 text-3xl md:text-4xl lg:text-5xl text-black-400 font-black"
+                  style={fade}
+                >
+                  Incredible design that doesn't solve a problem is{" "}
+                  <span className="emphasis">garbage UX</span>
+                </animated.h1>
+              )}
+            </VisibilitySensor>
             <h2 className="mt-8 text-xl text-black-400 leading-relaxed">
               You're wasting time with unnecessary & unusable design.
             </h2>
@@ -24,21 +37,7 @@ const IndexPage = siteTitle => {
               Learn how to solve user experience problems that top companies{" "}
               <span className="emphasis">actually</span> care about.
             </h3>
-            <form action="" className="mt-12 md:max-w-lg md:relative">
-              <input
-                placeholder="Enter your email"
-                name="email"
-                type="text"
-                required
-                className="p-3 md:p-4 w-full bg-gray-200 alt-border focus:outline-none focus:shadow-outline"
-              />
-              <button
-                type="submit"
-                className="mt-4 md:mt-0 p-3 md:p-4 w-full md:w-auto md:absolute right-0 bg-black-400 text-white text-lg md:text-base alt-border focus:outline-none focus:shadow-outline"
-              >
-                Learn not garbage UX
-              </button>
-            </form>
+            <EmailInput />
             <aside className="md:max-w-lg">
               <p className="text-lg">These tips will help you learn:</p>
               <div className="mt-3 flex items-center">
@@ -53,10 +52,16 @@ const IndexPage = siteTitle => {
                   Tactical & practical design
                 </h3>
               </div>
-              <div className="mt-3 flex items-center">
-                <IconCheck className="h-6 w-6 inline-block" />{" "}
-                <h3 className="ml-4 inline-block body-font">UX positioning</h3>
-              </div>
+              <VisibilitySensor>
+                {({ isVisible }) => (
+                  <animated.div className="mt-3 flex items-center" style={fade}>
+                    <IconCheck className="h-6 w-6 inline-block" />{" "}
+                    <h3 className="ml-4 inline-block body-font">
+                      UX positioning
+                    </h3>
+                  </animated.div>
+                )}
+              </VisibilitySensor>
             </aside>
           </section>
         </header>

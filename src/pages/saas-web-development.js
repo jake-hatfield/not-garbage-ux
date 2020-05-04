@@ -3,7 +3,9 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import VisibilitySensor from "react-visibility-sensor"
 import Calendly from "../components/calendly"
+import CalendlyButton from "../components/CalendlyButton"
 import IconCheck from "../../content/assets/icon-check.svg"
 import IconCode from "../../content/assets/icon-code.svg"
 import IconEdit from "../../content/assets/icon-edit.svg"
@@ -20,8 +22,12 @@ import BlobLeft from "../../content/assets/blob-left.svg"
 import BlobMiddle from "../../content/assets/blob-middle.svg"
 import BlobRight from "../../content/assets/blob-right.svg"
 
-const IndexPage = siteTitle => {
+const IndexPage = ({ siteTitle }) => {
+  const closeCalendly = () => {
+    calendlyActive && setCalendlyActive(!calendlyActive)
+  }
   const [calendlyActive, setCalendlyActive] = useState(false)
+
   return (
     <Layout title={siteTitle}>
       <SEO title="Home" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
@@ -43,12 +49,10 @@ const IndexPage = siteTitle => {
               users. I help SaaS startups make sure they have the best branding,
               messaging, and technical advantage possible.
             </h3>
-            <button
-              type="submit"
-              className="mt-12 p-3 md:p-4 w-full md:w-auto bg-black-400 text-white text-lg md:text-base alt-border focus:outline-none focus:shadow-outline"
-            >
-              Book a clarity call
-            </button>
+            <CalendlyButton
+              calendlyActive={calendlyActive}
+              setCalendlyActive={setCalendlyActive}
+            />
           </div>
         </header>
         <section className="mt-16 lg:mt-64 container lg:flex lg:justify-between">
@@ -233,10 +237,10 @@ const IndexPage = siteTitle => {
                 Squeaky-clean code
               </h3>
               <p className="mt-4 text-gray-800">
-                NGUX page sizes are 6x lighter and load ~3x faster than the
-                internet average. They also use your Google Analytics data and
-                AI to pre-load the next pages users are most likely to visit,
-                providing a seamless & enjoyable user experience.
+                NGUX page sizes are 6x lighter and load at least 2x faster than
+                the internet average. They also use your Google Analytics data
+                and AI to pre-load the next pages users are most likely to
+                visit, providing a seamless UX.
               </p>
             </div>
             <div className="mt-8 lg:mt-12 md:flex md:flex-col lg:items-end">
@@ -287,25 +291,15 @@ const IndexPage = siteTitle => {
             </li>
           </ol>
           <div className="mt-12 lg:mt-24 md:flex md:justify-center">
-            <button
-              type="submit"
-              className="p-3 md:p-4 w-full md:w-auto bg-black-400 text-white text-lg md:text-base alt-border focus:outline-none focus:shadow-outline"
-              onClick={() => setCalendlyActive(!calendlyActive)}
-            >
-              Book a clarity call
-            </button>
+            <CalendlyButton
+              calendlyActive={calendlyActive}
+              setCalendlyActive={setCalendlyActive}
+            />
           </div>
-          {/* <div style={{ height: "500px" }}>
-            <iframe
-              src="https://calendly.com/jake-hatfield/saas-clarity-call?text_color=040404&primary_color=040404"
-              width="100%"
-              height="100%"
-              frameborder="0"
-            ></iframe>
-          </div> */}
           <Calendly
             account="jake-hatfield"
             eventName="saas-clarity-call"
+            setCalendlyActive={setCalendlyActive}
             calendlyActive={calendlyActive}
           />
         </section>

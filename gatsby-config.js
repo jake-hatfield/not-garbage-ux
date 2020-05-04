@@ -100,14 +100,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-gtag`,
+      resolve: "gatsby-plugin-mailchimp",
       options: {
-        // You can add multiple tracking ids and a pageview event will be fired for all of them.
-        trackingIds: [
-          "GA-TRACKING_ID", // Google Analytics / GA
-          "AW-CONVERSION_ID", // Google Ads / Adwords / AW
-          "DC-FLOODIGHT_ID", // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
-        ],
+        endpoint:
+          "https://notgarbageux.us8.list-manage.com/subscribe/post?u=c5615722a15ee17a8e9a37681&amp;id=fc5981e515",
       },
     },
   ],
