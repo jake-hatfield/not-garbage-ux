@@ -5,11 +5,29 @@ import { animated, useSpring } from "react-spring"
 const EmailInput = () => {
   const [email, setEmail] = useState("")
   const [success, setSuccess] = useState(false)
+  const [failure, setFailure] = useState(false)
+  const [redundant, setRedundant] = useState(false)
   const handleSubmit = e => {
     e.preventDefault()
     addToMailchimp(email)
       .then(data => {
-        if (data.result === "success") {
+        console.log(data.result)
+        console.log(failure)
+        if (
+          (data.result === "error") &
+          (success == true) &
+          (failure == false)
+        ) {
+          setSuccess(!success)
+          setFailure(!failure)
+          setRedundant(!redundant)
+        } else if (
+          (data.result === "error") & (failure == false) ||
+          success == true
+        ) {
+          setFailure(!failure)
+        } else if ((data.result === "success") & (failure == true)) {
+          setFailure(!failure)
           setSuccess(!success)
         }
       })
@@ -21,21 +39,38 @@ const EmailInput = () => {
   const handleEmailChange = event => {
     setEmail(event.currentTarget.value)
   }
-  const fade = useSpring({ opacity: success ? 1 : 0, timeout: 5000 })
+  const fade = useSpring({
+    opacity: success || failure || redundant ? 1 : 0,
+  })
+
   return (
-    <div>
+    <div className="md:max-w-lg">
       <animated.p
         className={`${
           success ? `block` : `hidden`
         } mt-2 mb-4 py-2 pl-4 pr-2 bg-gray-300 border-l-4 border-black-400`}
         style={fade}
       >
-        Please <strong>don't</strong> verify your email address. Reverse
-        psychology.
+        You're in. Please <strong>don't</strong> verify your email address.
+        <span className="text-xs"> (Reverse psychology)</span>
       </animated.p>
+      <animated.p
+        className={`${
+          failure ? `block` : `hidden`
+        } mt-2 mb-4 py-2 pl-4 pr-2 bg-gray-300 border-l-4 border-black-400`}
+        style={fade}
+      >
+        {redundant
+          ? `You've already signed up for these fire tips. Chill & check your inbox.`
+          : `AHHH. We're throwin' errors. Try a different email to
+      make it stop.`}
+      </animated.p>
+
       <form
         onSubmit={handleSubmit}
-        className={`${success ? `mt-2` : `mt-8`} md:max-w-lg md:relative`}
+        className={`${
+          success || failure || redundant ? `mt-2` : `mt-8`
+        } md:relative`}
       >
         <input
           placeholder="Enter your email"
