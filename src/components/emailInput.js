@@ -29,6 +29,8 @@ const EmailInput = () => {
         } else if ((data.result === "success") & (failure == true)) {
           setFailure(!failure)
           setSuccess(!success)
+        } else if (data.result === "success") {
+          setSuccess(!success)
         }
       })
       .catch(error => {
@@ -51,7 +53,7 @@ const EmailInput = () => {
         } mt-2 mb-4 py-2 pl-4 pr-2 bg-gray-300 border-l-4 border-black-400`}
         style={fade}
       >
-        You're in. Please <strong>don't</strong> verify your email address.
+        You're in. Please <strong>don't</strong> check your inbox now.
         <span className="text-xs"> (Reverse psychology)</span>
       </animated.p>
       <animated.p
