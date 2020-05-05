@@ -46,7 +46,7 @@ const EmailInput = () => {
   })
 
   return (
-    <div className="md:max-w-lg">
+    <div className={`md:max-w-lg`}>
       <animated.p
         className={`${
           success ? `block` : `hidden`
@@ -71,7 +71,7 @@ const EmailInput = () => {
       <form
         onSubmit={handleSubmit}
         className={`${
-          success || failure || redundant ? `mt-2` : `mt-8`
+          success || failure || redundant ? `mt-2` : `mt-4 lg:mt-8`
         } md:relative`}
       >
         <input

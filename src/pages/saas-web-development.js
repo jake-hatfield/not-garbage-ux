@@ -15,12 +15,12 @@ import IconChat from "../../content/assets/icon-chat.svg"
 import IconPersona from "../../content/assets/icon-persona.svg"
 import IconTech from "../../content/assets/icon-tech.svg"
 import SaasHeroImage from "../../content/assets/saas-hero-image.svg"
-import SaasLaunch from "../../content/assets/launching-saas.svg"
+import SaasMissedTargets from "../../content/assets/saas-missed-targets.svg"
 import TechAdvantage from "../../content/assets/tech-advantage.svg"
 import HeroBlob from "../../content/assets/main-blob.svg"
-import BlobLeft from "../../content/assets/blob-left.svg"
-import BlobMiddle from "../../content/assets/blob-middle.svg"
-import BlobRight from "../../content/assets/blob-right.svg"
+import Schedule from "../../content/assets/schedule.svg"
+import Collaborate from "../../content/assets/collaborate.svg"
+import Call from "../../content/assets/call.svg"
 
 const IndexPage = ({ siteTitle }) => {
   const closeCalendly = () => {
@@ -56,8 +56,8 @@ const IndexPage = ({ siteTitle }) => {
           </div>
         </header>
         <section className="mt-16 lg:mt-64 container lg:flex lg:justify-between">
-          <SaasLaunch className="mx-auto lg:m-0 lg:sticky saas-sticky-image h-64 w-64" />
-          <div className="md:mx-auto lg:m-0 md:max-w-xl lg:w-2/5">
+          <SaasMissedTargets className="mx-auto lg:mx-0 lg:mr-12 lg:sticky saas-sticky-image w-full lg:w-2/5 h-64" />
+          <div className="md:mx-auto lg:m-0 md:max-w-xl lg:w-3/5">
             <aside className="mt-8 lg:mt-0">
               <h4 className="text-lg text-gray-600 font-bold">
                 Ugly messaging = ugly churn
@@ -133,10 +133,10 @@ const IndexPage = ({ siteTitle }) => {
                   Clarifying your message
                 </h3>
                 <p className="mt-4 text-gray-800">
-                  Your company may solve a few different problems, but which
-                  one(s) do your users truly care about the most? I will trim
-                  the fat from your messaging to serve your users up some
-                  filet-mignon quality clarity.
+                  Your company may solve many problems, but which one(s) do your
+                  users care about the most? I will trim the fat from your
+                  messaging to serve your users up some filet-mignon quality
+                  clarity.
                 </p>
               </div>
             </div>
@@ -224,9 +224,12 @@ const IndexPage = ({ siteTitle }) => {
             <p className="mt-6 lg:w-3/5 text-gray-600 text-sm leading-snug">
               If you can't, you have to get on a call with me. As much as I love
               a good waste of time, I recommend{" "}
-              <Link to={``} className="text-alt-link">
+              <button
+                onClick={() => setCalendlyActive(!calendlyActive)}
+                className="text-alt-link"
+              >
                 the call
-              </Link>
+              </button>
               .
             </p>
           </div>
@@ -240,7 +243,7 @@ const IndexPage = ({ siteTitle }) => {
                 NGUX page sizes are 6x lighter and load at least 2x faster than
                 the internet average. They also use your Google Analytics data
                 and AI to pre-load the next pages users are most likely to
-                visit, providing a seamless UX.
+                visit, providing a seamless UX and boosting conversions.
               </p>
             </div>
             <div className="mt-8 lg:mt-12 md:flex md:flex-col lg:items-end">
@@ -259,38 +262,42 @@ const IndexPage = ({ siteTitle }) => {
         </aside>
         <section className="mt-16 lg:mt-48 container">
           <h2 className="text-center text-xl md:text-2xl lg:text-4xl text-black-400 font-black">
-            Are we a good fit?
+            Interested in the MRR alley-oop?
           </h2>
+          <h3 className="mt-6 text-center lg:text-xl text-black-400 leading-relaxed">
+            Let's evaluate your SaaS positioning and technical advantages with a
+            free 30 minute consultation.
+          </h3>
           <ol className="mt-12 lg:mt-24 md:flex md:justify-between counter-reset text-center">
             <li className="counter">
               <h3
                 id="next-steps"
-                className="mt-12 md:mt-0 text-2xl font-bold text-black-400"
+                className="mt-12 md:mt-0 text-lg font-bold text-black-400"
               >
-                Hello
+                Schedule a free chat
               </h3>
-              <BlobLeft className="mt-8 mx-auto h-56 w-56 md:h-48 md:w-48" />
+              <Schedule className="mt-8 mx-auto h-40 w-40 lg:h-56 lg:w-56 xl:h-64 xl:w-64" />
             </li>
             <li className="counter">
               <h3
                 id="next-steps"
-                className="mt-12 md:mt-0 text-2xl font-bold text-black-400"
+                className="mt-12 md:mt-0 text-lg font-bold text-black-400"
               >
-                Hello
+                Discuss your challenges
               </h3>
-              <BlobMiddle className="mt-8 mx-auto h-56 w-56 md:h-48 md:w-48" />
+              <Call className="mt-8 mx-auto h-40 w-40 lg:h-56 lg:w-56 xl:h-64 xl:w-64" />
             </li>
             <li className="counter">
               <h3
                 id="next-steps"
-                className="mt-12 md:mt-0 text-2xl font-bold text-black-400"
+                className="mt-12 md:mt-0 text-lg font-bold text-black-400"
               >
-                Hello
+                Collaborate if we're a good fit
               </h3>
-              <BlobRight className="mt-8 mx-auto h-56 w-56 md:h-48 md:w-48" />
+              <Collaborate className="mt-8 mx-auto h-40 w-40 lg:h-56 lg:w-56 xl:h-64 xl:w-64" />
             </li>
           </ol>
-          <div className="mt-12 lg:mt-24 md:flex md:justify-center">
+          <div className="mt-6 md:flex md:justify-center">
             <CalendlyButton
               calendlyActive={calendlyActive}
               setCalendlyActive={setCalendlyActive}

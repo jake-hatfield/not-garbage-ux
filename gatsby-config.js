@@ -2,9 +2,9 @@ module.exports = {
   siteMetadata: {
     // edit below
     title: `Not Garbage UX`,
-    author: `Kyle Matthews`,
+    author: `Jake Hatfield`,
     description: `A starter personal blog with styled components, dark mode, and Netlify CMS.`,
-    siteUrl: `https://notgarbageux.netlify.app/`,
+    siteUrl: `https://notgarbageux.com`,
     social: {
       twitter: `kylemathews`,
     },
@@ -18,6 +18,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-feed-mdx`,
     `gatsby-plugin-postcss`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {

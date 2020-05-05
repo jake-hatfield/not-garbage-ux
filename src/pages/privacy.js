@@ -12,9 +12,9 @@ const PrivacyPolicy = () => {
           Welcome to our Privacy Policy
         </h1>
         <p className="mt-4">
-          It is Not Garbage UX's policy to respect your privacy regarding any
-          information we may collect while operating our website. This Privacy
-          Policy applies to{" "}
+          It is our policy to respect your privacy regarding any information we
+          may collect while operating our website. This Privacy Policy applies
+          to{" "}
           <Link to={"https://notgarbageux.com/"} className="alt-link">
             https://notgarbageux.com/
           </Link>{" "}
