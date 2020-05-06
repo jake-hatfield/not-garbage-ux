@@ -91,7 +91,7 @@ const IndexPage = ({ siteTitle }) => {
             </aside>
           </div>
         </section>
-        <section className="mt-16 lg:mt-48 container lg:flex lg:justify-between">
+        <section className="mt-16 lg:mt-48 container lg:flex lg:justify-between relative">
           <header className="md:mx-auto lg:mx-0 lg:mr-16 xl:mr-32 md:max-w-xl lg:w-2/5">
             <h4 className="text-lg text-gray-600 font-bold">
               The MRR alley-oop
@@ -253,7 +253,7 @@ const IndexPage = ({ siteTitle }) => {
               </h3>
               <p className="mt-4 text-gray-800">
                 It's your site, so you should know how to use it. NGUX sites can
-                be used with essentially any CMS, saving you time and an steep
+                be used with essentially any CMS, saving you time and a steep
                 learning curve. Worry less about your content management system
                 and more about your actual content, like it should be.
               </p>

@@ -98,7 +98,7 @@ const header = ({
                 designTipsActive()
               }}
             >
-              Design Tips
+              UX Tips
             </button>
           </div>
         </animated.div>
@@ -125,7 +125,7 @@ const header = ({
               className={`lg:inline-block lg:px-4 lg:py-3 lg:bg-transparent lg:border border-2 border-black-400 relative z-10 alt-border lg:hover:text-white lg:hover:bg-black-400 transition duration-300 focus:outline-none focus:shadow-outline`}
               onClick={() => setDesignTipsOpen(!designTipsOpen)}
             >
-              Design Tips
+              UX Tips
             </button>
           </div>
         </div>
