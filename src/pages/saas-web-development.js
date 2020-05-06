@@ -56,7 +56,7 @@ const IndexPage = ({ siteTitle }) => {
           </div>
         </header>
         <section className="mt-16 lg:mt-64 container lg:flex lg:justify-between">
-          <SaasMissedTargets className="mx-auto lg:mx-0 lg:mr-12 lg:sticky saas-sticky-image w-full lg:w-2/5 h-64" />
+          <SaasMissedTargets className="mx-auto lg:mx-0 lg:mr-24 lg:sticky saas-sticky-image w-full lg:w-2/5 h-64" />
           <div className="md:mx-auto lg:m-0 md:max-w-xl lg:w-3/5">
             <aside className="mt-8 lg:mt-0">
               <h4 className="text-lg text-gray-600 font-bold">

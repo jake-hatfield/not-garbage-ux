@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
       <SEO title="Privacy Policy" />
       <div className="my-6 lg:my-12 container height-100">
         <h1 className="mt-8 text-3xl md:text-4xl lg:text-5xl text-black-400 font-black">
-          Welcome to our Privacy Policy
+          Welcome to our privacy policy
         </h1>
         <p className="mt-4">
           It is our policy to respect your privacy regarding any information we
