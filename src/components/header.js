@@ -88,6 +88,7 @@ const header = ({
               to={`/about`}
               className={`${navOpen ? `` : `alt-link`} mt-8 block`}
               activeClassName="active"
+              onClick={() => (navOpen ? setNavOpen(!navOpen) : ``)}
             >
               About
             </Link>

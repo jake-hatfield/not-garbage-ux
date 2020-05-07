@@ -22,7 +22,7 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
                   <Link to={`/`}>Home</Link>
                 </div>
                 <div className="pt-4 text-lg text-black-100 hover:text-white transition duration-300">
-                  <Link to={`/saas-web-development`}>Work</Link>
+                  <Link to={`/saas-web-development`}>My Work</Link>
                 </div>
                 <div className="pt-4 text-lg text-black-100 hover:text-white transition duration-300">
                   <Link to={`/contact`}>Contact</Link>
@@ -34,12 +34,12 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
                   <Link to={`/blog`}>Blog</Link>
                 </div>
                 <div className="pt-4 text-lg text-black-100 hover:text-white transition duration-300">
-                  <button onClick={() => setDesignTipsOpen(!designTipsOpen)}>
-                    Design Tips
-                  </button>
+                  <Link to={`/about`}>About</Link>
                 </div>
                 <div className="pt-4 text-lg text-black-100 hover:text-white transition duration-300">
-                  <Link to={`/about`}>About</Link>
+                  <button onClick={() => setDesignTipsOpen(!designTipsOpen)}>
+                    UX Tips
+                  </button>
                 </div>
               </div>
             </div>

@@ -89,10 +89,13 @@ module.exports = {
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
-        display: `minimal-ui`,
+        display: `standalone`,
         // edit below
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/ngux-favicon.png`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
     },
     {
       resolve: `gatsby-plugin-typography`,
