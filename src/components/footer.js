@@ -31,7 +31,7 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
                   <Link to={`/contact`}>Contact</Link>
                 </div>
               </div>
-              <div className="md:mr-20">
+              <div className="md:mr-20 lg:mr-32">
                 <h4 className="font-bold text-xl">Learn</h4>
                 <div className="pt-4 text-lg text-black-100 hover:text-white transition duration-300">
                   <Link to={`/blog`}>Blog</Link>
@@ -86,7 +86,7 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
           </div>
           <div className="mt-2 md:mt-0">
             <a href="sitemap.xml">Sitemap</a>
-            <Link to={`/privacy`} className="ml-12 md:ml-24">
+            <Link to={`/privacy`} className="ml-12 md:ml-24 lg:ml-32">
               Privacy
             </Link>
           </div>
