@@ -47,7 +47,7 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
               </div>
             </div>
             <div>
-              <h4 className="hidden md:block font-bold text-xl">Connect</h4>
+              <h4 className="hidden md:block font-bold text-xl">Social</h4>
               <div className="flex md:flex-col">
                 <div className="pt-4">
                   <a
@@ -55,7 +55,7 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <TwitterIcon className="md:mx-auto h-6 w-6" />
+                    <TwitterIcon className="h-6 w-6" />
                   </a>
                 </div>
                 <div className="pt-4 pl-8 md:pl-0">
@@ -64,7 +64,7 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <YoutubeIcon className="md:mx-auto h-6 w-6" />
+                    <YoutubeIcon className="h-6 w-6" />
                   </a>
                 </div>
                 <div className="pt-4 pl-8 md:pl-0">
@@ -73,7 +73,7 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <DribbleIcon className="md:mx-auto h-6 w-6" />
+                    <DribbleIcon className="h-6 w-6" />
                   </a>
                 </div>
               </div>
