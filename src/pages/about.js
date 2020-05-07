@@ -60,12 +60,17 @@ const IndexPage = ({ siteTitle }) => {
               customers want before they think to ask for it.
             </p>
             <p className="mt-4 lg:max-w-lg text-base leading-loose">
-              Whether you're a freelancer or work a 9-5, you should know how to
-              solve UX problems. The process is never over, so if you wanna
-              crusade against garbage UX, contact me or join my newsletter.
-            </p>
-            <p className="mt-4 lg:max-w-lg text-base leading-loose">
-              BTW you're allowed to do both.
+              Whether you're a freelancer or work a 9-5, we should all know how
+              to solve UX problems. I'm perpetually learning, so if you have any
+              tips{" "}
+              <Link to={`/contact`} className="text-alt-link">
+                contact me
+              </Link>
+              . If you want tips, join the newsletter.
+              <p className="mt-4 lg:max-w-lg text-base leading-loose">
+                BTW you're allowed to do both.
+              </p>
+              <EmailInput />
             </p>
           </section>
           <section className="mt-12 mx-auto lg:m-0 lg:max-w-md xl:max-w-lg">
@@ -87,15 +92,12 @@ const IndexPage = ({ siteTitle }) => {
             <p className="mt-4 lg:max-w-lg text-base leading-loose">
               I decided to launch Not Garbage UX as a way to help designers and
               developers with the technical aspects of building successful
-              products. I do consulting and web development for SaaS companies
+              products. I do{" "}
+              <Link to={`/saas-web-development`} className="text-alt-link">
+                consulting and web development for SaaS companies
+              </Link>{" "}
               and live in Dallas with my wife and our dog.
             </p>
-            <aside className="">
-              <h3 className="mt-8 mb-4 lg:mb-0 text-xl md:text-2xl lg:text-4xl text-black-400">
-                UX tips galore
-              </h3>
-              <EmailInput />
-            </aside>
           </section>
         </div>
       </section>

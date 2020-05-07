@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 import { animated, useSpring } from "react-spring"
 
-const EmailInput = () => {
+const EmailInput = ({ centered }) => {
   const [email, setEmail] = useState("")
   const [success, setSuccess] = useState(false)
   const [failure, setFailure] = useState(false)
@@ -46,7 +46,7 @@ const EmailInput = () => {
   })
 
   return (
-    <div className={`md:max-w-lg`}>
+    <div className={`${centered ? `lg:max-w-lg mx-auto` : ``} md:max-w-lg`}>
       <animated.p
         className={`${
           success ? `block` : `hidden`

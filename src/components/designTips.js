@@ -7,7 +7,6 @@ const designTips = ({
   designTipsOpen,
   setDesignTipsOpen,
   designTipsAnimation,
-  fluid,
 }) => {
   return (
     <animated.article
@@ -28,9 +27,7 @@ const designTips = ({
             We make it rain on your inbox with weekly UX tips and case studies
             not found on the blog. Ya have FOMO yet?
           </p>
-          <div className="mx-auto">
-            <EmailInput />
-          </div>
+          <EmailInput centered={true} />
           <p className="mt-4 body-font text-base md:text-lg text-gray-600">
             No freebies, limited time offers, or spam - just one article a week.
           </p>
