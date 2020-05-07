@@ -1,5 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
+import TwitterIcon from "../../content/assets/twitter-icon.svg"
+import YoutubeIcon from "../../content/assets/youtube-icon.svg"
+import DribbleIcon from "../../content/assets/dribble-icon.svg"
 
 const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
   return (
@@ -45,6 +48,35 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
             </div>
             <div>
               <h4 className="hidden md:block font-bold text-xl">Connect</h4>
+              <div className="flex md:flex-col">
+                <div className="pt-4">
+                  <a
+                    href="https://twitter.com/notgarbageux"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <TwitterIcon className="md:mx-auto h-6 w-6" />
+                  </a>
+                </div>
+                <div className="pt-4 pl-8 md:pl-0">
+                  <a
+                    href="https://www.youtube.com/channel/UCGy3Vvy30krGgkKYtxSOMaw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <YoutubeIcon className="md:mx-auto h-6 w-6" />
+                  </a>
+                </div>
+                <div className="pt-4 pl-8 md:pl-0">
+                  <a
+                    href="https://dribbble.com/notgarbageux"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <DribbleIcon className="md:mx-auto h-6 w-6" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
