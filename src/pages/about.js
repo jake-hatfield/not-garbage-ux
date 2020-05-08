@@ -25,7 +25,10 @@ const IndexPage = ({ siteTitle }) => {
 
   return (
     <Layout title={siteTitle}>
-      <SEO title="Home" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <SEO
+        title="About Jake Hatfield and NGUX"
+        keywords={[`not garbage ux`, `ngux`, `jake hatfield`, `ux design`]}
+      />
       <section className="my-8 md:my-16 height-alt w-full container">
         <div className="mx-auto lg:flex md:max-w-lg lg:max-w-full">
           <section className="lg:mr-16 xl:mr-24">
@@ -60,9 +63,9 @@ const IndexPage = ({ siteTitle }) => {
               customers want before they think to ask for it.
             </p>
             <p className="mt-4 lg:max-w-lg text-base leading-loose">
-              Whether you're a freelancer or work a 9-5, we should all know how
-              to solve UX problems. I'm perpetually learning, so if you have any
-              tips{" "}
+              Whether you're a design freelancer or work a 9-5, we should all
+              know how to solve UX problems. I'm perpetually learning, so if you
+              have any tips{" "}
               <Link to={`/contact`} className="text-alt-link">
                 contact me
               </Link>
@@ -79,7 +82,7 @@ const IndexPage = ({ siteTitle }) => {
                 fixed={aboutPage.avatar.childImageSharp.fixed}
                 className="rounded-full"
               />
-              <h2 className="ml-8 text-xl md:text-2xl lg:text-4xl text-black-400">
+              <h2 className="mt-6 md:mt-0 md:ml-8 text-xl md:text-2xl lg:text-4xl text-black-400">
                 Jake Hatfield
               </h2>
             </div>
@@ -87,7 +90,7 @@ const IndexPage = ({ siteTitle }) => {
               I graduated in 2016 from Texas A&M with a B.S. in Biology and
               quickly lit that tuition on fire by instead co-founding a software
               company for Amazon sellers a year later. Drinking from a fire hose
-              along the way, we scaled it and exited in 18 months.
+              along the way, we scaled it and sold in 18 months.
             </p>
             <p className="mt-4 lg:max-w-lg text-base leading-loose">
               I decided to launch Not Garbage UX as a way to help designers and

@@ -12,7 +12,7 @@ const Blog = props => {
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <SEO title="All posts" />
+      <SEO title="UX Tips, Strategies and Case Studies" />
       <section className="mt-8 lg:mt-16 container height-100 md:max-w-xl lg:max-w-2xl">
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug

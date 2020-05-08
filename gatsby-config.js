@@ -3,7 +3,7 @@ module.exports = {
     // edit below
     title: `Not Garbage UX`,
     author: `Jake Hatfield`,
-    description: `A starter personal blog with styled components, dark mode, and Netlify CMS.`,
+    description: `Tactical and practical UX tips for designers and developers trying to not suck.`,
     siteUrl: `https://notgarbageux.com`,
     social: {
       twitter: `kylemathews`,

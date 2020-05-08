@@ -6,7 +6,6 @@ import { MDXProvider } from "@mdx-js/react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "gatsby-image"
-import Divider from "../components/divider"
 import SocialShare from "../components/socialShare"
 import { useSpring, animated } from "react-spring"
 
@@ -24,7 +23,6 @@ const BlogPostTemplate = props => {
   })
   const topic = post.frontmatter.topic || `UX design`
 
-  const shortcodes = { Divider }
   // alert(document.body.clientHeight)
   // function getScrollPercent() {
   //   var h = document.documentElement,
@@ -127,7 +125,7 @@ const BlogPostTemplate = props => {
               id="blog-body"
               className="text-lg text-gray-900 leading-relaxed"
             >
-              <MDXProvider components={shortcodes}>
+              <MDXProvider>
                 <MDXRenderer title={`Title`}>{post.body}</MDXRenderer>
               </MDXProvider>
             </section>

@@ -14,7 +14,10 @@ const IndexPage = ({ siteTitle }) => {
 
   return (
     <Layout title={siteTitle}>
-      <SEO title="Home" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <SEO
+        title="UX Tips, Strategies, and Case Studies"
+        keywords={[`UX tips`, `UX design`, `user experience`, `not garbage ux`]}
+      />
       <section className="height-100 mb-16 w-full md:flex md:items-center lg:flex-col lg:justify-center lg:items-start">
         <header className="container relative z-0">
           <section className="mx-auto lg:m-0 md:max-w-lg lg:max-w-xl xl:max-w-2xl">

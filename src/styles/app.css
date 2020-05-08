@@ -195,13 +195,13 @@ h6 > {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .height-alt {
     min-height: calc(100vh - 596px);
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .height-alt {
     min-height: calc(100vh - 392px);
   }

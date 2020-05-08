@@ -5,7 +5,10 @@ import SEO from "../components/seo"
 const contact = () => {
   return (
     <Layout>
-      <SEO title="Home" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <SEO
+        title="Contact"
+        keywords={[`contact not garbage ux`, `contact NGUX`]}
+      />
       <article className="mt-8 lg:mt-16 height-alt relative lg:flex lg:items-center">
         <div className="absolute bottom-0 left-0 h-64 w-full bg-gray-300 negative-z" />
         <section className="pb-16 container md:w-3/4 lg:w-full lg:flex lg:items-start">
