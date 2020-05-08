@@ -13,12 +13,13 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
             <Link to={`/`} className="text-3xl md:text-4xl">
               {siteTitle}
             </Link>
-            <h1 className="mt-4 md:mt-6 lg:mt-8 font-bold leading-relaxed">
-              Tactical UX design tips and <br /> problem-solving strategies
-            </h1>
+            <h2 className="mt-4 md:max-w-xs lg:max-w-sm font-bold text-base lg:text-lg leading-relaxed md:leading-loose">
+              Learn tactical UX strategies that solve real-life problems and
+              make products better.
+            </h2>
           </div>
           <div className="md:flex md:justify-around md:items-start">
-            <div className="mt-16 md:mt-0 flex">
+            <div className="mt-12 md:mt-0 flex">
               <div className="mr-20 lg:mr-32">
                 <h4 className="font-bold text-xl">Company</h4>
                 <div className="pt-4 text-lg text-black-100 hover:text-white transition duration-300">
@@ -46,7 +47,7 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
                 </div>
               </div>
             </div>
-            <div>
+            <div className="mt-4 mg:mt-0">
               <h4 className="hidden md:block font-bold text-xl">Social</h4>
               <div className="flex md:flex-col">
                 <div className="pt-4">

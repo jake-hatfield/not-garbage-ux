@@ -34,15 +34,18 @@ const IndexPage = ({ siteTitle }) => {
               )}
             </VisibilitySensor>
             <h2 className="mt-8 text-xl text-black-400 leading-relaxed">
-              You're wasting time with unnecessary & unusable design.
+              Fact: Amazing illustrators, developers, and designers can still be
+              awful at creating a good user experience.
             </h2>
             <h3 className="mt-4 lg:max-w-lg text-lg leading-loose">
-              Learn how to solve user experience problems that top companies{" "}
-              <span className="emphasis">actually</span> care about.
+              Learn how to solve tough problems, hone your skills, become
+              well-rounded, and suck less at UX design.
             </h3>
             <EmailInput />
             <aside className="md:max-w-lg">
-              <p className="text-lg">These tips will help you learn:</p>
+              <p className="text-lg">
+                These tips and case studies will help you learn:
+              </p>
               <div className="mt-3 flex items-center">
                 <IconCheck className="h-6 w-6 inline-block" />{" "}
                 <h3 className="ml-4 inline-block body-font">
@@ -52,7 +55,7 @@ const IndexPage = ({ siteTitle }) => {
               <div className="mt-3 flex items-center">
                 <IconCheck className="h-6 w-6 inline-block" />{" "}
                 <h3 className="ml-4 inline-block body-font">
-                  Tactical & practical design
+                  Tactical user interface design
                 </h3>
               </div>
               <VisibilitySensor>
@@ -60,7 +63,7 @@ const IndexPage = ({ siteTitle }) => {
                   <animated.div className="mt-3 flex items-center" style={fade}>
                     <IconCheck className="h-6 w-6 inline-block" />{" "}
                     <h3 className="ml-4 inline-block body-font">
-                      UX positioning
+                      Data-informed UX positioning
                     </h3>
                   </animated.div>
                 )}

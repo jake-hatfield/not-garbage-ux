@@ -65,7 +65,7 @@ const IndexPage = ({ siteTitle }) => {
             <p className="mt-4 lg:max-w-lg text-base leading-loose">
               Whether you're a design freelancer or work a 9-5, we should all
               know how to solve UX problems. I'm perpetually learning, so if you
-              have any tips{" "}
+              have any tips please{" "}
               <Link to={`/contact`} className="text-alt-link">
                 contact me
               </Link>
