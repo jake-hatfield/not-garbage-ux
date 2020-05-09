@@ -26,9 +26,10 @@ const Blog = props => {
                     </h2>
                   </Link>
                   <aside className="mt-5 lg:mt-4 flex flex-wrap body-font font-light text-sm md:text-base text-gray-600">
-                    <address className="mr-4 mb-0 not-italic">
+                    <address className="mr-2 mb-0 not-italic">
                       {node.frontmatter.author}
                     </address>
+                    <span className="mr-2">&#8226;</span>
                     <time pubdate={node.frontmatter.date}>
                       Last updated: {node.frontmatter.date}
                     </time>
