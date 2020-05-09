@@ -70,11 +70,11 @@ const IndexPage = ({ siteTitle }) => {
                 contact me
               </Link>
               . If you want tips, join the newsletter.
-              <p className="mt-4 lg:max-w-lg text-base leading-loose">
-                BTW you're allowed to do both.
-              </p>
-              <EmailInput />
             </p>
+            <p className="mt-4 lg:max-w-lg text-base leading-loose">
+              BTW you're allowed to do both.
+            </p>
+            <EmailInput />
           </section>
           <section className="mt-12 mx-auto lg:m-0 lg:max-w-md xl:max-w-lg">
             <div className="md:flex md:items-center">
