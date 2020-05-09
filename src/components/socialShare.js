@@ -21,7 +21,7 @@ const socialShare = ({ siteUrl, url, title, twitterTags }) => {
           size={32}
           round={true}
           bgStyle={{ fill: `#cbd5e0` }}
-          iconFillColor={`#2d3748`}
+          iconFillColor={`#050505`}
         />
       </FacebookShareButton>
       <TwitterShareButton
@@ -34,7 +34,7 @@ const socialShare = ({ siteUrl, url, title, twitterTags }) => {
           size={32}
           round={true}
           bgStyle={{ fill: `#cbd5e0` }}
-          iconFillColor={`#2d3748`}
+          iconFillColor={`#050505`}
         />
       </TwitterShareButton>
       <LinkedinShareButton
@@ -47,7 +47,7 @@ const socialShare = ({ siteUrl, url, title, twitterTags }) => {
           size={32}
           round={true}
           bgStyle={{ fill: `#cbd5e0` }}
-          iconFillColor={`#2d3748`}
+          iconFillColor={`#050505`}
         />
       </LinkedinShareButton>
       <RedditShareButton
@@ -59,7 +59,7 @@ const socialShare = ({ siteUrl, url, title, twitterTags }) => {
           size={32}
           round={true}
           bgStyle={{ fill: `#cbd5e0` }}
-          iconFillColor={`#2d3748`}
+          iconFillColor={`#050505`}
         />
       </RedditShareButton>
     </section>

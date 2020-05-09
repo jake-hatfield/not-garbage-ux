@@ -11,8 +11,8 @@ const contact = () => {
       />
       <article className="mt-8 lg:mt-16 height-alt relative lg:flex lg:items-center">
         <div className="absolute bottom-0 left-0 h-64 w-full bg-gray-300 negative-z" />
-        <section className="pb-16 container md:w-3/4 lg:w-full lg:flex lg:items-start">
-          <header className="md:mt-16 lg:mr-16 md:max-w-lg xl:max-w-lg md:text-center lg:text-left">
+        <section className="pb-16 container lg:w-full lg:flex lg:items-start">
+          <header className="mx-auto md:mt-16 lg:mr-16 md:max-w-lg xl:max-w-lg md:text-center lg:text-left">
             <h1 className="text-3xl md:text-4xl lg:text-5xl text-black-400 font-black">
               Contact me
             </h1>

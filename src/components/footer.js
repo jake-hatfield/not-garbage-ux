@@ -26,10 +26,10 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
                   <Link to={`/`}>Home</Link>
                 </div>
                 <div className="pt-4 text-lg text-black-100 hover:text-white transition duration-300">
-                  <Link to={`/saas-web-development`}>My Work</Link>
+                  <Link to={`/contact`}>Contact</Link>
                 </div>
                 <div className="pt-4 text-lg text-black-100 hover:text-white transition duration-300">
-                  <Link to={`/contact`}>Contact</Link>
+                  <Link to={`/saas-web-development`}>Work With Me</Link>
                 </div>
               </div>
               <div className="md:mr-20 lg:mr-32">
