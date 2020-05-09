@@ -211,6 +211,10 @@ h6 > {
   z-index: -1;
 }
 
+.branding-Container__cls1___2F38v {
+  display: none !important;
+}
+
 @media only screen and (max-width: 767px) {
   .mobile-nav {
     position: fixed;
@@ -302,12 +306,12 @@ h6 > {
 @media only screen and (max-width: 767px) {
   .design-tips-animate {
     position: fixed;
-    top: 80px;
+    top: 0;
     bottom: 0;
     left: -100vw;
     right: 0;
     height: 150vh;
-    height: calc(100vh - 78px);
+    height: 100vh;
     min-width: 100vw;
     z-index: 31;
   }
@@ -342,11 +346,11 @@ h6 > {
 @media only screen and (max-width: 767px) {
   .saas-call {
     position: fixed;
-    top: 80px;
+    top: 0;
     left: 0;
     right: auto;
     bottom: auto;
-    height: calc(100vh - 80px);
+    height: 100vh;
     max-width: 100vw;
     overflow-x: none;
     z-index: 31;
@@ -427,6 +431,16 @@ h6 > {
   right: 0;
   z-index: 19;
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 767px) {
+  .close-popup {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .alt-border {

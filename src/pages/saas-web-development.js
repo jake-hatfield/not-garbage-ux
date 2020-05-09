@@ -193,10 +193,10 @@ const IndexPage = ({ siteTitle }) => {
               >
                 *{" "}
               </Link>
-              <p className="mt-4 text-gray-800">
-                Using the PRPL pattern, next-gen technology, and streamlined
-                deployment techniques, our sites have inherent advantages like:
-              </p>
+            </p>
+            <p className="mt-4 text-gray-800">
+              Using the PRPL pattern, next-gen technology, and streamlined
+              deployment techniques, our sites have inherent advantages like:
             </p>
             <div className="mt-6">
               <p className="flex items-center">

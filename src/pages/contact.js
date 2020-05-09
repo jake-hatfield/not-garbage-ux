@@ -36,7 +36,7 @@ const contact = () => {
               <div>
                 <p>
                   <label
-                    for="name"
+                    htmlFor="name"
                     className="header-font text-gray-600 text-xl"
                   >
                     Your name
@@ -51,7 +51,7 @@ const contact = () => {
                   </label>
 
                   <label
-                    for="email"
+                    htmlFor="email"
                     className="mt-4 inline-block w-full header-font text-gray-600 text-xl"
                   >
                     Your email

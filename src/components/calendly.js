@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import { animated, useSpring, config } from "react-spring"
+import Close from "../../content/assets/close.svg"
 
 const Calendly = ({
   account,
@@ -42,7 +43,11 @@ const Calendly = ({
         <div
           className="calendly-inline-widget mx-auto w-screen h-full md:w-4/5 md:h-full lg:w-full relative z-10"
           data-url={buildCalendlyUrl(account, eventName)}
-        />
+        >
+          <button onClick={() => setCalendlyActive(!calendlyActive)}>
+            <Close className="close-popup" />
+          </button>
+        </div>
       </div>
     </animated.article>
   )
