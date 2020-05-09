@@ -13,14 +13,14 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
             <Link to={`/`} className="text-3xl md:text-4xl">
               {siteTitle}
             </Link>
-            <h2 className="mt-4 md:max-w-xs lg:max-w-sm font-bold text-base lg:text-lg leading-relaxed md:leading-loose">
+            <h2 className="mt-4 md:max-w-xs lg:max-w-sm font-bold text-base lg:text-lg leading-loose">
               Learn tactical UX strategies that solve real-life problems and
               make products better.
             </h2>
           </div>
           <div className="md:flex md:justify-around md:items-start">
-            <div className="mt-12 md:mt-0 flex">
-              <div className="mr-20 lg:mr-32">
+            <div className="mt-8 md:mt-0 flex">
+              <div className="mr-16 lg:mr-32">
                 <h4 className="font-bold text-xl">Company</h4>
                 <div className="pt-4 text-lg text-black-100 hover:text-white transition duration-300">
                   <Link to={`/`}>Home</Link>
@@ -29,10 +29,10 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
                   <Link to={`/contact`}>Contact</Link>
                 </div>
                 <div className="pt-4 text-lg text-black-100 hover:text-white transition duration-300">
-                  <Link to={`/saas-web-development`}>Work With Me</Link>
+                  <Link to={`/saas-web-development`}>Services</Link>
                 </div>
               </div>
-              <div className="md:mr-20 lg:mr-32">
+              <div className="md:mr-16 lg:mr-32">
                 <h4 className="font-bold text-xl">Learn</h4>
                 <div className="pt-4 text-lg text-black-100 hover:text-white transition duration-300">
                   <Link to={`/blog`}>Blog</Link>
@@ -47,7 +47,7 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
                 </div>
               </div>
             </div>
-            <div className="mt-4 mg:mt-0">
+            <div className="mt-4 md:mt-0">
               <h4 className="hidden md:block font-bold text-xl">Social</h4>
               <div className="flex md:flex-col">
                 <div className="pt-4">

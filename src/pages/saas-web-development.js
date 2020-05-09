@@ -178,7 +178,7 @@ const IndexPage = ({ siteTitle }) => {
         </section>
         <aside className="mt-16 lg:mt-48 container lg:flex lg:justify-between relative">
           <TechAdvantage className="tech-image" />
-          <div className="md:mx-auto lg:mx-0 md:max-w-xl lg:w-1/3 z-10">
+          <div className="mt-8 lg:mt-0 md:mx-auto lg:mx-0 md:max-w-xl lg:w-1/3 z-10">
             <IconTech className="h-10 w-10" />
             <h3 className="mt-6 lg:text-2xl text-black-400">
               Immediate tech gains
