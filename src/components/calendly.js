@@ -41,7 +41,7 @@ const Calendly = ({
     >
       <div style={fade} className={`saas-call`}>
         <div
-          className="calendly-inline-widget mx-auto w-screen h-full md:w-4/5 md:h-full lg:w-full relative z-10"
+          className="calendly-inline-widget mx-auto w-screen h-full md:w-4/5 lg:w-full relative z-10"
           data-url={buildCalendlyUrl(account, eventName)}
         >
           <button onClick={() => setCalendlyActive(!calendlyActive)}>
