@@ -403,6 +403,10 @@ h6 > {
   }
 }
 
+.webkit-sticky {
+  position: -webkit-sticky;
+}
+
 @media only screen and (min-width: 650px) and (max-width: 767px) {
   .close-popup {
     position: absolute;
@@ -562,6 +566,7 @@ h6 > {
 @media only screen and (min-width: 1024px) {
   .saas-sticky-image {
     top: 20vh;
+    position: -webkit-sticky;
   }
 }
 
