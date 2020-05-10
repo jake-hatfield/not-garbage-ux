@@ -3,6 +3,16 @@ import Typography from "typography"
 const typography = new Typography({
   baseFontSize: "16px",
   baseLineHeight: 1.666,
+  googleFonts: [
+    {
+      name: "Raleway",
+      styles: ["400, 700, 900"],
+    },
+    {
+      name: "Roboto",
+      styles: ["400", "700"],
+    },
+  ],
   headerFontFamily: ["Raleway", "sans-serif"],
   bodyFontFamily: ["Roboto", "sans-serif"],
   // See below for the full list of options.
