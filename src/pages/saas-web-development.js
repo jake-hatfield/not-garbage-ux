@@ -40,7 +40,7 @@ const IndexPage = ({ siteTitle }) => {
         ]}
       />
 
-      <section className="mb-16 height-100 w-full md:flex md:flex-col md:justify-center md:items-start text-gray-800 ">
+      <section className="mb-16 height-100 w-full md:flex md:flex-col md:justify-center md:items-start text-gray-800 overflow-x-hidden">
         <header className="lg:mt-32 container md:flex md:items-center relative z-0">
           <HeroBlob />
           <div className="mx-auto lg:m-0 md:max-w-xl xl:max-w-2xl">

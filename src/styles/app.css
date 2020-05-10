@@ -500,6 +500,7 @@ h6 > {
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .saas-hero-image {
+    display: inline-block;
     position: static;
     height: 80%;
     width: 80%;
@@ -509,6 +510,7 @@ h6 > {
 
 @media only screen and (min-width: 1024px) {
   .saas-hero-image {
+    display: inline-block;
     position: absolute;
     top: -50px;
     right: -300px;
