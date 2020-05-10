@@ -6,7 +6,7 @@ const typography = new Typography({
   googleFonts: [
     {
       name: "Raleway",
-      styles: ["400, 700, 900"],
+      styles: ["400", "700", "900"],
     },
     {
       name: "Roboto",
