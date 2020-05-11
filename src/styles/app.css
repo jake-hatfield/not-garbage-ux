@@ -377,7 +377,7 @@ h6 > {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 70%;
+    height: 100%;
     max-width: 100vw;
     z-index: 31;
   }
@@ -400,6 +400,7 @@ h6 > {
     right: 20px;
     width: 16px;
     height: 16px;
+    z-index: 40;
   }
 }
 
@@ -490,34 +491,14 @@ h6 > {
   }
 }
 
-@media only screen and (max-width: 767px) {
-  .saas-hero-image {
-    position: static;
-    height: 100%;
-    width: 100%;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .saas-hero-image {
-    display: inline-block;
-    position: static;
-    height: 80%;
-    width: 80%;
-    margin: 0 auto;
-  }
-}
-
 @media only screen and (min-width: 1024px) {
   .saas-hero-image {
-    display: inline-block;
     position: absolute;
-    top: -50px;
-    right: -300px;
+    top: 150px;
+    right: 0px;
     left: auto;
     bottom: auto;
-    width: 800px;
-    overflow-x: hidden;
+    width: 600px;
     z-index: 2;
   }
 }
@@ -545,7 +526,7 @@ h6 > {
     bottom: 0px;
     left: 120px;
     top: auto;
-    width: 800px;
+    max-width: 800px;
     z-index: 0;
   }
 }

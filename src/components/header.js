@@ -27,11 +27,11 @@ const header = ({
   return (
     <nav
       className={`${
-        isAnyActive ? `sticky webkit-sticky top-0` : ``
-      } py-4 md:py-6 w-full z-20 bg-white text-4xl`}
+        isAnyActive ? `sticky webkit-sticky top-0 bg-white` : ``
+      } py-4 md:py-6 w-full z-20 text-4xl`}
     >
       <div className="container w-full flex justify-between items-center">
-        <div className="relative z-10">
+        <div className="relative">
           <Link
             className={`text-3xl lg:text-4xl text-black-400 emphasis`}
             to={`/`}
