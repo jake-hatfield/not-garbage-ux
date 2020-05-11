@@ -41,8 +41,8 @@ const IndexPage = ({ siteTitle }) => {
       />
 
       <section className="mb-16 height-100 w-full md:flex md:flex-col md:justify-center md:items-start text-gray-800 relative">
-        <SaasHeroImage className="mx-auto w-64 md:w-1/2 saas-hero-image" />
-        <header className="lg:pt-32 container md:flex md:items-center relative">
+        <header className="lg:pt-32 container lg:flex lg:items-center relative">
+          <SaasHeroImage className="mx-auto w-64 md:w-1/2 saas-hero-image" />
           <HeroBlob />
           <div className="mx-auto lg:m-0 md:max-w-xl xl:max-w-2xl">
             <h1 className="mt-8 lg:mt-0 text-3xl md:text-4xl lg:text-5xl text-black-400 font-black">

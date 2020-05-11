@@ -481,7 +481,7 @@ h6 > {
     right: 0px;
     left: auto;
     bottom: auto;
-    width: 600px;
+    max-width: 600px;
     z-index: 2;
   }
 }

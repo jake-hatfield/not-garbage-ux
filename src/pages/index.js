@@ -18,7 +18,7 @@ const IndexPage = ({ siteTitle }) => {
         title="UX Tips, Strategies, and Case Studies"
         keywords={[`UX tips`, `UX design`, `user experience`, `not garbage ux`]}
       />
-      <section className="height-alt mb-16 w-full md:flex md:items-center lg:flex-col lg:justify-center lg:items-start lg:relative overflow-x-hidden">
+      <section className="height-alt my-8 md:my-16 w-full md:flex md:items-center lg:flex-col lg:justify-center lg:items-start lg:relative overflow-x-hidden">
         <header className="container relative z-0">
           <HeroImage className="mx-auto w-full md:w-1/2 hero-image" />
           <section className="mx-auto lg:m-0 md:max-w-lg lg:max-w-xl">
