@@ -35,14 +35,6 @@ const Layout = props => {
           title
         }
       }
-      designTipsImage: file(relativePath: { eq: "gatsby-icon.png" }) {
-        id
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
     }
   `)
   return (
@@ -60,7 +52,6 @@ const Layout = props => {
         designTipsOpen={designTipsOpen}
         setDesignTipsOpen={setDesignTipsOpen}
         designTipsAnimation={designTipsAnimation}
-        fluid={data.designTipsImage.childImageSharp.fluid}
       />
       <main>{children}</main>
       <Footer
