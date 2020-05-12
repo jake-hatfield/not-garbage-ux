@@ -6,7 +6,7 @@ module.exports = {
     description: `Tactical and practical UX tips for designers and developers trying to not suck.`,
     siteUrl: `https://notgarbageux.com`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `notgarbageux`,
     },
   },
   plugins: [
