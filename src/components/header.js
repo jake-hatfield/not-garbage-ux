@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { animated } from "react-spring"
+import NGUXLogo from "../../content/assets/ngux-logo.svg"
 
 const header = ({
   navAnimation,
@@ -37,7 +38,7 @@ const header = ({
             to={`/`}
             onClick={() => (isAnyActive ? active() : ``)}
           >
-            NGUX
+            <NGUXLogo className="w-40 lg:w-48" />
           </Link>
         </div>
         <div className="block lg:hidden">
