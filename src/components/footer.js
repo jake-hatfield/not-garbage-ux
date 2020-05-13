@@ -34,9 +34,9 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
               </div>
               <div className="md:mr-16 lg:mr-32">
                 <h4 className="font-bold text-xl">Learn</h4>
-                <div className="pt-4 text-lg text-black-100 hover:text-white transition duration-300">
+                {/* <div className="pt-4 text-lg text-black-100 hover:text-white transition duration-300">
                   <Link to={`/blog`}>Blog</Link>
-                </div>
+                </div> */}
                 <div className="pt-4 text-lg text-black-100 hover:text-white transition duration-300">
                   <Link to={`/about`}>About</Link>
                 </div>
