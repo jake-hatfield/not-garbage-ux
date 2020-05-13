@@ -12,7 +12,16 @@ const Blog = props => {
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <SEO title="UX Tips, Strategies and Case Studies" />
+      <SEO
+        title="UX Tips, Strategies and Case Studies"
+        description="Not Garbage UX writes up case studies and strategies all about how to make things suck less. We cover everything from UI design principles to clear messaging."
+        keywords={[
+          `not garbage ux blog`,
+          `ux case studies`,
+          `ux tips`,
+          `NGUX blog`,
+        ]}
+      />
       <section className="mt-8 lg:mt-16 container height-100 md:max-w-xl lg:max-w-2xl">
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug

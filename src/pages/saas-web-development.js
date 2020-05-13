@@ -32,6 +32,7 @@ const IndexPage = ({ siteTitle }) => {
     <Layout title={siteTitle}>
       <SEO
         title="SaaS Consulting and Web Development"
+        description="NGUX helps SaaS companies position their products to drive conversions and increase user retention through better messaging and modern web development."
         keywords={[
           `SaaS consulting`,
           `SaaS web development`,

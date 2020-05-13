@@ -7,6 +7,7 @@ const contact = () => {
     <Layout>
       <SEO
         title="Contact"
+        description="Have a question for NGUX? There's a very real person on the other end of this contact form. Reach out with a UX design question or anything on your mind."
         keywords={[`contact not garbage ux`, `contact NGUX`]}
       />
       <article className="mt-8 lg:mt-16 height-alt relative lg:flex lg:items-center">

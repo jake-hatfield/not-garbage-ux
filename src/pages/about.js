@@ -27,6 +27,7 @@ const IndexPage = ({ siteTitle }) => {
     <Layout title={siteTitle}>
       <SEO
         title="About Jake Hatfield and NGUX"
+        description="Not Garbage UX is dedicated to improving user experience design. The blog is a resource for designers and I do UX consulting and web development for SaaS companies."
         keywords={[`not garbage ux`, `ngux`, `jake hatfield`, `ux design`]}
       />
       <section className="my-8 md:my-16 height-alt w-full container">

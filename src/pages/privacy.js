@@ -6,7 +6,10 @@ import SEO from "../components/seo"
 const PrivacyPolicy = () => {
   return (
     <Layout title="Privacy Policy">
-      <SEO title="Privacy Policy" />
+      <SEO
+        title="Privacy Policy"
+        description="Not Garbage UX values your privacy as much as we value our own. Here's our full privacy policy."
+      />
       <div className="my-6 lg:my-12 container height-100">
         <h1 className="mt-8 text-3xl md:text-4xl lg:text-5xl text-black-400 font-black">
           Welcome to our privacy policy
