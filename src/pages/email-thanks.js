@@ -8,7 +8,7 @@ const EmailThanks = ({ siteTitle }) => {
   return (
     <Layout title={siteTitle}>
       <SEO
-        title="Thank You For Subscribing"
+        title="Yo! Thanks for Subscribing"
         keywords={[`ux design tips`, `not garbage UX newsletter`]}
       />
       <section className="height-alt my-8 md:my-16 container md:max-w-xl lg:max-w-2xl">
