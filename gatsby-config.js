@@ -18,7 +18,13 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-feed-mdx`,
     `gatsby-plugin-postcss`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/email-thanks/`],
+      },
+    },
+
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
