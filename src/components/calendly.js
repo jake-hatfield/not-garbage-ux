@@ -8,10 +8,10 @@ const Calendly = ({
   calendlyActive,
   setCalendlyActive,
 }) => {
-  const buildCalendlyUrl = (account, eventName) =>
-    `https://calendly.com/${account}/${eventName}`
   const calendlyScriptSrc =
     "https://assets.calendly.com/assets/external/widget.js"
+  const buildCalendlyUrl = (account, eventName) =>
+    `https://calendly.com/${account}/${eventName}`
 
   useEffect(() => {
     const head = document.querySelector("head")
@@ -24,6 +24,7 @@ const Calendly = ({
       head.removeChild(script)
     }
   })
+
   // const calendlyAnimation = useSpring({
   //   transform: calendlyActive
   //     ? `translate3d(0%,0,0)`
@@ -33,7 +34,7 @@ const Calendly = ({
   const fade = useSpring({ opacity: calendlyActive ? 1 : 0 })
 
   return (
-    <animated.article
+    <animated.div
       style={fade}
       id="invisible-div"
       className={`${calendlyActive ? `block` : `hidden`} calendly-overlay`}
@@ -49,7 +50,7 @@ const Calendly = ({
         </button>
         {/* </div> */}
       </div>
-    </animated.article>
+    </animated.div>
   )
 }
 
