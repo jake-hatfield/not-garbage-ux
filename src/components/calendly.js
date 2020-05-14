@@ -34,23 +34,26 @@ const Calendly = ({
   const fade = useSpring({ opacity: calendlyActive ? 1 : 0 })
 
   return (
-    <animated.div
-      style={fade}
-      id="invisible-div"
-      className={`${calendlyActive ? `block` : `hidden`} calendly-overlay`}
-      onClick={() => setCalendlyActive(!calendlyActive)}
-    >
-      {/* <div style={fade} className={`saas-call`}> */}
+    <div id="schedule_form">
       <div
         className="calendly-inline-widget mx-auto w-screen h-full md:w-4/5 lg:w-full relative z-10"
         data-url={buildCalendlyUrl(account, eventName)}
       />
-      {/* <button onClick={() => setCalendlyActive(!calendlyActive)}>
-          <Close className="close-popup" />
-        </button> */}
-      {/* </div> */}
-      {/* </div> */}
-    </animated.div>
+    </div>
+    // <animated.div
+    // //   style={fade}
+    // //   id="invisible-div"
+    // //   className={`${calendlyActive ? `block` : `hidden`} calendly-overlay`}
+    // //   onClick={() => setCalendlyActive(!calendlyActive)}
+    // // >
+    //   {/* <div style={fade} className={`saas-call`}> */}
+
+    //   {/* <button onClick={() => setCalendlyActive(!calendlyActive)}>
+    //       <Close className="close-popup" />
+    //     </button> */}
+    //   {/* </div> */}
+    //   {/* </div> */}
+    // // </animated.div>
   )
 }
 
