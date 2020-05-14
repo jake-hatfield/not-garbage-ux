@@ -44,12 +44,12 @@ const Calendly = ({
       <div
         className="calendly-inline-widget mx-auto w-screen h-full md:w-4/5 lg:w-full relative z-10"
         data-url={buildCalendlyUrl(account, eventName)}
-      >
-        <button onClick={() => setCalendlyActive(!calendlyActive)}>
+      />
+      {/* <button onClick={() => setCalendlyActive(!calendlyActive)}>
           <Close className="close-popup" />
-        </button>
-        {/* </div> */}
-      </div>
+        </button> */}
+      {/* </div> */}
+      {/* </div> */}
     </animated.div>
   )
 }
