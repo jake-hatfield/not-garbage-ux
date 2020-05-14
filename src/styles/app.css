@@ -261,7 +261,7 @@ h6 > {
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 640px) {
   .mobile-nav-animate {
     position: fixed;
     top: 80px;
@@ -274,7 +274,7 @@ h6 > {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
   .mobile-nav-animate {
     position: fixed;
     top: 96px;
@@ -433,67 +433,6 @@ h6 > {
 .webkit-sticky {
   position: -webkit-sticky;
 }
-
-/* @media only screen and (max-width: 649px) {
-  .close-popup {
-    position: absolute;
-    top: 40px;
-    right: 20px;
-    width: 16px;
-    height: 16px;
-    z-index: 40;
-  }
-} */
-
-/* @media only screen and (min-width: 650px) and (max-width: 767px) {
-  .close-popup {
-    position: absolute;
-    top: 105px;
-    right: 65px;
-    width: 16px;
-    height: 16px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 811px) {
-  .close-popup {
-    position: absolute;
-    top: 45px;
-    right: 35px;
-    width: 16px;
-    height: 16px;
-  }
-}
-
-@media only screen and (min-width: 812px) and (max-width: 935px) {
-  .close-popup {
-    position: absolute;
-    top: 115px;
-    right: 55px;
-    width: 16px;
-    height: 16px;
-  }
-}
-
-@media only screen and (min-width: 936px) {
-  .close-popup {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    top: 0;
-    right: 8%;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .close-popup {
-    position: absolute;
-    top: 40px;
-    right: 12%;
-    width: 16px;
-    height: 16px;
-  }
-} */
 
 @media only screen and (max-width: 767px) {
   .close-popup {
