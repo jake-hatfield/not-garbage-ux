@@ -1,5 +1,4 @@
-import React, { useEffect } from "react"
-import { animated, useSpring, config } from "react-spring"
+import React from "react"
 import Close from "../../content/assets/close.svg"
 
 class CalendlyEmbed extends React.Component {

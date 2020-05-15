@@ -314,12 +314,16 @@ const IndexPage = ({ siteTitle }) => {
           </div>
         </section>
       </section>
-      <CalendlyEmbed
-        account="jake-hatfield"
-        eventName="saas-clarity-call"
-        setCalendlyActive={setCalendlyActive}
-        calendlyActive={calendlyActive}
-      />
+      <div>
+        <div>
+          <CalendlyEmbed
+            account="jake-hatfield"
+            eventName="saas-clarity-call"
+            setCalendlyActive={setCalendlyActive}
+            calendlyActive={calendlyActive}
+          />
+        </div>
+      </div>
     </Layout>
   )
 }
