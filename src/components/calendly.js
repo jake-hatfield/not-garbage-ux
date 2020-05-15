@@ -22,7 +22,7 @@ class CalendlyEmbed extends React.Component {
     const { account, eventName, calendlyActive, setCalendlyActive } = this.props
     return (
       <div
-        id="invisible-div"
+        id="schedule_form invisible-div"
         className={`${
           calendlyActive ? `block lg:flex lg:items-center` : `hidden`
         } calendly-overlay overflow-y-hidden`}
@@ -31,14 +31,14 @@ class CalendlyEmbed extends React.Component {
         <div
           className="calendly-inline-widget calendly-styles w-full z-40"
           data-url={this.buildCalendlyUrl(account, eventName)}
-        >
-          <button
+        />
+        {/* <button
             onClick={() => setCalendlyActive(!calendlyActive)}
             className="close-popup p-3 rounded-lg focus:outline-none focus:shadow-outline"
           >
             <Close className="h-4 w-4" />
           </button>
-        </div>
+        </div> */}
       </div>
     )
   }
