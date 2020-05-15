@@ -3,8 +3,8 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import VisibilitySensor from "react-visibility-sensor"
 import CalendlyEmbed from "../components/calendly"
+// import { PopupText } from "react-calendly"
 import CalendlyButton from "../components/CalendlyButton"
 import IconCheck from "../../content/assets/icon-check.svg"
 import IconCode from "../../content/assets/icon-code.svg"
@@ -315,15 +315,24 @@ const IndexPage = ({ siteTitle }) => {
         </section>
       </section>
       <div>
-        <div>
-          <CalendlyEmbed
-            account="jake-hatfield"
-            eventName="saas-clarity-call"
-            setCalendlyActive={setCalendlyActive}
-            calendlyActive={calendlyActive}
-          />
-        </div>
+        <CalendlyEmbed
+          account="jake-hatfield"
+          eventName="saas-clarity-call"
+          calendlyActive={calendlyActive}
+          setCalendlyActive={setCalendlyActive}
+        />
       </div>
+      {/* <button className="mt-12 p-3 md:p-4 w-full md:w-auto bg-black-400 text-white text-lg md:text-base alt-border focus:outline-none focus:shadow-outline">
+        <PopupText
+          color="#050505"
+          text="Book a clarity call"
+          textColor="#050505"
+          className={`${
+            calendlyActive ? `block lg:flex lg:items-center` : `hidden`
+          }`}
+          url="https://calendly.com/jake-hatfield/saas-clarity-call"
+        />
+      </button> */}
     </Layout>
   )
 }
