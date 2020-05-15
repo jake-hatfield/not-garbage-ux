@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import VisibilitySensor from "react-visibility-sensor"
-import Calendly from "../components/calendly"
+import CalendlyEmbed from "../components/calendly"
 import CalendlyButton from "../components/CalendlyButton"
 import IconCheck from "../../content/assets/icon-check.svg"
 import IconCode from "../../content/assets/icon-code.svg"
@@ -314,7 +314,7 @@ const IndexPage = ({ siteTitle }) => {
           </div>
         </section>
       </section>
-      <Calendly
+      <CalendlyEmbed
         account="jake-hatfield"
         eventName="saas-clarity-call"
         setCalendlyActive={setCalendlyActive}
