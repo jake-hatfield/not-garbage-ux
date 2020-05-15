@@ -13,11 +13,11 @@ class CalendlyEmbed extends React.Component {
     head.appendChild(script)
   }
 
-  componentWillUnmount() {
-    const head = document.querySelector("head")
-    const script = document.querySelector("script")
-    head.removeChild(script)
-  }
+  // componentWillUnmount() {
+  //   const head = document.querySelector("head")
+  //   const script = document.querySelector("script")
+  //   head.removeChild(script)
+  // }
   render() {
     const { account, eventName, calendlyActive, setCalendlyActive } = this.props
     return (
