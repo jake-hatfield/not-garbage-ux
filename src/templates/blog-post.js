@@ -85,7 +85,7 @@ const BlogPostTemplate = props => {
           <h1 className="mt-4 lg:mt-0 text-3xl md:text-4xl text-black-400 font-black">
             {post.frontmatter.title}
           </h1>
-          <h2 className="mt-6 text-xl text-gray-600">
+          <h2 className="mt-4 text-xl text-gray-600">
             {post.frontmatter.shortDescription}
           </h2>
           <aside className="mt-8 lg:flex lg:flex-wrap lg:justify-between lg:items-end body-font font-light text-sm md:text-base text-gray-600">

@@ -40,7 +40,7 @@ const Blog = props => {
                     </address>
                     <span className="mr-2">&#8226;</span>
                     <time pubdate={node.frontmatter.date}>
-                      Last updated: {node.frontmatter.date}
+                      Updated: {node.frontmatter.date}
                     </time>
                   </aside>
                 </div>

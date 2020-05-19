@@ -71,7 +71,7 @@ const IndexPage = ({ siteTitle }) => {
               <h4 className="text-lg text-gray-600 font-bold">
                 Ugly messaging = ugly churn
               </h4>
-              <h2 className="mt-8 lg:mt-4 text-xl md:text-2xl lg:text-4xl text-black-400 font-black">
+              <h2 className="mt-4 text-xl md:text-2xl lg:text-4xl text-black-400 font-black">
                 Does your current customer acquisition strategy make you want to
                 puke?
               </h2>
@@ -86,7 +86,7 @@ const IndexPage = ({ siteTitle }) => {
               <h4 className="text-lg text-gray-600 font-bold">
                 The same old stuff = the same old results
               </h4>
-              <h2 className="mt-8 lg:mt-4 text-xl md:text-2xl lg:text-4xl text-black-400 font-black">
+              <h2 className="mt-4 text-xl md:text-2xl lg:text-4xl text-black-400 font-black">
                 Another site rebrand isn't going to bring home the bacon.
               </h2>
               <p className="mt-4 lg:max-w-lg text-lg leading-loose">
@@ -105,7 +105,7 @@ const IndexPage = ({ siteTitle }) => {
             <h4 className="text-lg text-gray-600 font-bold">
               The MRR alley-oop
             </h4>
-            <h2 className="mt-8 lg:mt-4 text-xl md:text-2xl lg:text-4xl text-black-400 font-black">
+            <h2 className="mt-4 text-xl md:text-2xl lg:text-4xl text-black-400 font-black">
               How to dunk on your soon-to-be users from the freethrow line{" "}
               <span className="font-normal text-base text-gray-600">
                 (in a good way)

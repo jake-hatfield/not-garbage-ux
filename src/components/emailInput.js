@@ -84,7 +84,7 @@ const EmailInput = ({ centered }) => {
         />
         <button
           type="submit"
-          className="mt-4 md:mt-0 p-3 md:p-4 w-full md:w-auto md:absolute right-0 bg-black-400 text-white text-lg md:text-base alt-border focus:outline-none focus:shadow-outline"
+          className="mt-2 md:mt-0 p-3 md:p-4 w-full md:w-auto md:absolute right-0 bg-black-400 text-white text-lg md:text-base alt-border focus:outline-none focus:shadow-outline"
         >
           Learn not garbage UX
         </button>
