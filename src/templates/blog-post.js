@@ -7,6 +7,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "gatsby-image"
 import SocialShare from "../components/socialShare"
+import EmailInput from "../components/emailInput"
 import { useSpring, animated } from "react-spring"
 
 const BlogPostTemplate = props => {
@@ -44,7 +45,7 @@ const BlogPostTemplate = props => {
           className="blog-hero-image"
           fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
         />
-        {/* <aside
+        <aside
           className={`${
             sideBlog ? `opacity-100` : `opacity-0`
           } side-blog w-full transition-opacity ease-in-out duration-500`}
@@ -74,14 +75,14 @@ const BlogPostTemplate = props => {
               </div>
             </div>
           </div>
-        </aside> */}
+        </aside>
         <article className="mt-8 lg:mt-16 container md:max-w-xl lg:max-w-2xl relative">
-          {/* <button className="mr-8" onClick={() => setSideBlog(!sideBlog)}>
+          <button className="mr-8" onClick={() => setSideBlog(!sideBlog)}>
             Click
           </button>
           <button onClick={() => setAdditionalContent(!additionalContent)}>
             Click 2
-          </button> */}
+          </button>
           <h1 className="mt-4 lg:mt-0 text-3xl md:text-4xl text-black-400 font-black">
             {post.frontmatter.title}
           </h1>
@@ -136,20 +137,21 @@ const BlogPostTemplate = props => {
               flexWrap: `wrap`,
               justifyContent: `space-between`,
               listStyle: `none`,
-              padding: 0,
+              paddingTop: `16px`,
+              paddingBottom: `16px`,
             }}
           >
             <li>
               {previous && (
                 <Link to={`blog${previous.fields.slug}`} rel="prev">
-                  ← {previous.frontmatter.title}
+                  {previous.frontmatter.title}
                 </Link>
               )}
             </li>
             <li>
               {next && (
                 <Link to={`blog${next.fields.slug}`} rel="next">
-                  {next.frontmatter.title} →
+                  {next.frontmatter.title}
                 </Link>
               )}
             </li>

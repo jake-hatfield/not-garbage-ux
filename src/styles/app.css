@@ -60,11 +60,14 @@ body::-webkit-scrollbar-thumb {
   @apply mt-8 header-font text-2xl font-bold;
 }
 
-#blog-body h3,
-h4,
-h5,
-h6 > {
+#blog-body > h3 {
   @apply mt-6 header-font text-xl font-semibold;
+}
+
+#blog-body > h4,
+h5,
+h6 {
+  @apply mt-6 header-font text-lg font-semibold;
 }
 
 #blog-body > p {
@@ -77,6 +80,10 @@ h6 > {
 
 #blog-body > hr {
   @apply my-8;
+}
+
+#blog-body > img {
+  @apply border-8 border-gray-600;
 }
 
 @media only screen and (max-width: 1199px) {

@@ -60,7 +60,7 @@ const contact = () => {
                       type="email"
                       name="email"
                       label="Your Email"
-                      placeholder="youremail@domain.com"
+                      placeholder="youremail@email.com"
                       required
                       className="block mt-4 mb-4 p-4 w-full bg-gray-200 alt-border focus:outline-none focus:shadow-outline text-base"
                     />
