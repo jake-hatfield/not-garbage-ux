@@ -3,7 +3,6 @@ import React, { useState } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import EmailInput from "../components/emailInput"
-import VisibilitySensor from "react-visibility-sensor"
 import { animated, useSpring } from "react-spring"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
@@ -35,16 +34,12 @@ const IndexPage = ({ siteTitle }) => {
           <section className="lg:mr-16 xl:mr-24">
             <header>
               <section className="mx-auto lg:m-0 lg:max-w-xl xl:max-w-2xl">
-                <VisibilitySensor>
-                  {({ isVisible }) => (
-                    <animated.h1
-                      className="text-3xl md:text-4xl lg:text-5xl text-black-400 font-black"
-                      style={fade}
-                    >
-                      If you hate garbage UX, lucky day.
-                    </animated.h1>
-                  )}
-                </VisibilitySensor>
+                <animated.h1
+                  className="text-3xl md:text-4xl lg:text-5xl text-black-400 font-black"
+                  style={fade}
+                >
+                  If you hate garbage UX, lucky day.
+                </animated.h1>
                 <h2 className="mt-8 text-xl text-black-400 leading-relaxed">
                   I'm committed to helping designers & developers turn a UX
                   dumpster fire into digital experiences that users admire and

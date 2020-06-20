@@ -3,7 +3,6 @@ import React, { useState } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import EmailInput from "../components/emailInput"
-import VisibilitySensor from "react-visibility-sensor"
 import { animated, useSpring } from "react-spring"
 import HeroImage from "../../content/assets/hero-image.svg"
 import IconCheck from "../../content/assets/icon-check.svg"
@@ -23,17 +22,14 @@ const IndexPage = ({ siteTitle }) => {
         <header className="container relative z-0">
           <HeroImage className="mx-auto w-3/4 md:w-1/2 hero-image" />
           <section className="mx-auto lg:m-0 md:max-w-lg lg:max-w-xl">
-            <VisibilitySensor>
-              {({ isVisible }) => (
-                <animated.h1
-                  className="mt-8 lg:mt-0 text-3xl md:text-4xl lg:text-5xl text-black-400 font-black"
-                  style={fade}
-                >
-                  Incredible design that doesn't solve a problem is{" "}
-                  <span className="emphasis">garbage UX</span>
-                </animated.h1>
-              )}
-            </VisibilitySensor>
+            <animated.h1
+              className="mt-8 lg:mt-0 text-3xl md:text-4xl lg:text-5xl text-black-400 font-black"
+              style={fade}
+            >
+              Incredible design that doesn't solve a problem is{" "}
+              <span className="emphasis">garbage UX</span>
+            </animated.h1>
+
             <h2 className="mt-8 text-xl text-black-400 leading-relaxed">
               Fact: Amazing illustrators, developers, and designers can still be
               awful at creating a good user experience.
@@ -59,16 +55,13 @@ const IndexPage = ({ siteTitle }) => {
                   Tactical user interface design
                 </h3>
               </div>
-              <VisibilitySensor>
-                {({ isVisible }) => (
-                  <animated.div className="mt-3 flex items-center" style={fade}>
-                    <IconCheck className="h-6 w-6 inline-block" />{" "}
-                    <h3 className="ml-4 inline-block body-font">
-                      Data-informed UX positioning
-                    </h3>
-                  </animated.div>
-                )}
-              </VisibilitySensor>
+
+              <animated.div className="mt-3 flex items-center" style={fade}>
+                <IconCheck className="h-6 w-6 inline-block" />{" "}
+                <h3 className="ml-4 inline-block body-font">
+                  Data-informed UX positioning
+                </h3>
+              </animated.div>
             </aside>
           </section>
         </header>

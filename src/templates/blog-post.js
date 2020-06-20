@@ -2,37 +2,90 @@ import React, { useState } from "react"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "gatsby-image"
 import SocialShare from "../components/socialShare"
-import EmailInput from "../components/emailInput"
 import { useSpring, animated } from "react-spring"
+import addToMailchimp from "gatsby-plugin-mailchimp"
+import { useScrollPercentage } from "react-scroll-percentage"
 
 const BlogPostTemplate = props => {
   const post = props.data.mdx
   const siteTitle = props.data.site.siteMetadata.title
   const { previous, next } = props.pageContext
-  const [sideBlog, setSideBlog] = useState(false)
-  const [additionalContent, setAdditionalContent] = useState(false)
+
+  const topic = post.frontmatter.topic || `UX design`
+  const [email, setEmail] = useState("")
+  const [success, setSuccess] = useState(false)
+  const [failure, setFailure] = useState(false)
+  const [redundant, setRedundant] = useState(false)
+  const handleSubmit = e => {
+    e.preventDefault()
+    addToMailchimp(email)
+      .then(data => {
+        console.log(data.result)
+        console.log(failure)
+        if (
+          (data.result === "error") &
+          (success == true) &
+          (failure == false)
+        ) {
+          setSuccess(!success)
+          setFailure(!failure)
+          setRedundant(!redundant)
+        } else if (
+          (data.result === "error") & (failure == false) ||
+          success == true
+        ) {
+          setFailure(!failure)
+        } else if ((data.result === "success") & (failure == true)) {
+          setFailure(!failure)
+          setSuccess(!success)
+        } else if (data.result === "success") {
+          setSuccess(!success)
+        }
+      })
+      .catch(error => {
+        // Errors in here are client side
+        // Mailchimp always returns a 200
+      })
+  }
+  const handleEmailChange = event => {
+    setEmail(event.currentTarget.value)
+  }
+
+  let sideBlog = false
+  let additionalContent = false
+
+  const [ref, percentage] = useScrollPercentage({
+    threshold: 0,
+  })
+
+  if ((percentage > 0.1) & (percentage < 0.4)) {
+    sideBlog = true
+
+    // } else {
+    //   // sideBlog = false
+    //   console.log("true")
+    //   additionalContent = true
+  } else if (percentage > 0.400001) {
+    sideBlog = true
+    additionalContent = true
+  }
+
+  if (additionalContent === true) {
+    console.log("true")
+  }
+  const fade = useSpring({
+    opacity: success || failure || redundant ? 1 : 0,
+  })
   const primaryFade = useSpring({
     opacity: additionalContent ? 0 : 1,
   })
   const secondaryFade = useSpring({
     opacity: additionalContent ? 1 : 0,
   })
-  const topic = post.frontmatter.topic || `UX design`
-
-  // alert(document.body.clientHeight)
-  // function getScrollPercent() {
-  //   var h = document.documentElement,
-  //     b = document.body,
-  //     st = "scrollTop",
-  //     sh = "scrollHeight"
-  //   return ((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100
-  // }
-  // console.log(getScrollPercent)
 
   return (
     <Layout location={props.location} title={siteTitle}>
@@ -40,15 +93,15 @@ const BlogPostTemplate = props => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <section className="height-100">
+
+      <section className="height-100" ref={ref}>
         <Image
           className="blog-hero-image"
           fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
         />
         <aside
-          className={`${
-            sideBlog ? `opacity-100` : `opacity-0`
-          } side-blog w-full transition-opacity ease-in-out duration-500`}
+          className={`${sideBlog ? `opacity-100` : `opacity-0`} 
+          side-blog w-full transition-opacity ease-in-out duration-1000`}
         >
           <div className="flex justify-center">
             <div className="alt-container w-full">
@@ -61,7 +114,7 @@ const BlogPostTemplate = props => {
                     Interested in {topic}?
                   </h4>
                   <p className="mt-2 text-sm text-gray-600 leading-relaxed">
-                    There's tons more where this comes from.
+                    There's tons more where that came from...
                   </p>
                 </animated.div>
                 <animated.div style={secondaryFade}>
@@ -69,20 +122,50 @@ const BlogPostTemplate = props => {
                     Really, you should join our newsletter.
                   </p>
                   <h4 className="mt-2 body-font text-sm text-gray-600 leading-relaxed">
-                    We cover {topic} & more so thoroughly you might puke.
+                    We cover stuff like {topic} so thoroughly you might puke.
                   </h4>
                 </animated.div>
+                <form onSubmit={handleSubmit} className="mb-0">
+                  <input
+                    placeholder="Enter your email"
+                    onChange={handleEmailChange}
+                    name="email"
+                    type="text"
+                    required
+                    className="mt-4 p-3 w-full bg-gray-200 alt-border text-sm focus:outline-none focus:shadow-outline"
+                  />
+                  <button
+                    type="submit"
+                    className="mt-2 p-3 w-full bg-black-400 text-white text-sm alt-border focus:outline-none focus:shadow-outline"
+                  >
+                    Join the NGUX newsletter
+                  </button>
+                </form>
+                <animated.p
+                  className={`${
+                    success ? `block` : `hidden`
+                  } mt-4 py-2 pl-4 pr-2 bg-gray-300 border-l-4 border-black-400 text-sm`}
+                  style={fade}
+                >
+                  You're in. Please <strong>don't</strong> check your inbox now.
+                  <span className="text-xs"> (Reverse psychology)</span>
+                </animated.p>
+                <animated.p
+                  className={`${
+                    failure ? `block` : `hidden`
+                  } mt-4 py-2 pl-4 pr-2 bg-gray-300 border-l-4 border-black-400 text-sm`}
+                  style={fade}
+                >
+                  {redundant
+                    ? `You've already signed up for these fire tips. Chill & check your inbox.`
+                    : `AHHH. We're throwin' errors. Try a different email to
+      make it stop.`}
+                </animated.p>
               </div>
             </div>
           </div>
         </aside>
         <article className="mt-8 lg:mt-16 container md:max-w-xl lg:max-w-2xl relative">
-          <button className="mr-8" onClick={() => setSideBlog(!sideBlog)}>
-            Click
-          </button>
-          <button onClick={() => setAdditionalContent(!additionalContent)}>
-            Click 2
-          </button>
           <h1 className="mt-4 lg:mt-0 text-3xl md:text-4xl text-black-400 font-black">
             {post.frontmatter.title}
           </h1>
@@ -131,26 +214,26 @@ const BlogPostTemplate = props => {
               </MDXProvider>
             </section>
           </aside>
-          <ul
-            style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              paddingTop: `16px`,
-              paddingBottom: `16px`,
-            }}
-          >
+          <ul className="py-8 text-3xl text-black-400 font-black">
+            More Topics
             <li>
               {previous && (
-                <Link to={`blog${previous.fields.slug}`} rel="prev">
+                <Link
+                  to={`blog${previous.fields.slug}`}
+                  rel="prev"
+                  className="text-lg text-bold alt-link"
+                >
                   {previous.frontmatter.title}
                 </Link>
               )}
             </li>
             <li>
               {next && (
-                <Link to={`blog${next.fields.slug}`} rel="next">
+                <Link
+                  to={`blog${next.fields.slug}`}
+                  rel="next"
+                  className="text-base text-bold alt-link"
+                >
                   {next.frontmatter.title}
                 </Link>
               )}

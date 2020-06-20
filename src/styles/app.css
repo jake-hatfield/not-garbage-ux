@@ -96,16 +96,18 @@ h6 {
   .side-blog {
     display: block;
     position: fixed;
-    top: 300px;
+    top: 200px;
   }
 }
 
 .side-blog-w {
-  max-width: 150px;
+  max-width: 220px;
 }
 
 .alt-container {
-  max-width: 1080px;
+  max-width: 1115px;
+  /* position: sticky;
+  top: 350px; */
 }
 
 .double-shadow {
