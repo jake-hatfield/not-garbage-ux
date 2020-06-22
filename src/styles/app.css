@@ -581,18 +581,21 @@ h6 {
   width: 1.618em;
 }
 
-.commento-root.commento-card.commento-moderator::after,
-.commento-root.commento-submit-button,
-.commento-root.commento-card.commento-option-unsticky {
-  background: #050505 !important;
-}
+#commento.commento-root {
+  background: #050505;
+  /* .commento-card.commento-moderator::after,
+  #commento-submit-button-root,
+  .commento-root.commento-card.commento-option-unsticky {
+    background: #050505 !important;
+  }
 
-.commento-root.commento-footer.commento-logo-container {
-  display: none !important;
-}
+  .commento-root.commento-footer.commento-logo-container {
+    display: none !important;
+  }
 
-.commento-error {
-  color: #050505 !important;
+  .commento-error {
+    color: #050505 !important;
+  } */
 }
 
 .textured-bg {
