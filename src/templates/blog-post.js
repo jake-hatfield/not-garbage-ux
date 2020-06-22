@@ -210,7 +210,7 @@ const BlogPostTemplate = props => {
             </section>
           </aside>
           <ul className="py-8 text-3xl text-black-400 font-black">
-            More Topics
+            {/* More Topics */}
             <li>
               {previous && (
                 <Link
@@ -236,6 +236,8 @@ const BlogPostTemplate = props => {
           </ul>
           <hr />
         </article>
+        <script defer src="https://cdn.commento.io/js/commento.js"></script>
+        <div id="commento"></div>
       </section>
     </Layout>
   )
