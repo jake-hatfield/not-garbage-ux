@@ -593,7 +593,7 @@ h6 {
   display: none !important;
 }
 
-.commento-submit-button-root {
+#commento-submit-button-root {
   background: #050505 !important;
 }
 
