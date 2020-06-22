@@ -7,7 +7,11 @@ export default class Comments extends React.Component {
       <React.Fragment>
         <div id="commento" />
         <Helmet>
-          <script defer src="https://cdn.commento.io/js/commento.js" />
+          <script
+            defer
+            src="https://cdn.commento.io/js/commento.js"
+            data-css-override="https://notgarbageux.com/comment-styles.css"
+          />
         </Helmet>
       </React.Fragment>
     )

@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.commento-moderation-notice {
+  color: #050505;
+}
