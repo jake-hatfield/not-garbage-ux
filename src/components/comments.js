@@ -6,6 +6,7 @@ const insertScript = (src, id, parentElement) => {
   script.src = src
   script.id = id
   parentElement.appendChild(script)
+
   return script
 }
 // Helper to remove scripts from our page
