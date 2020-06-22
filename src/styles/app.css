@@ -581,10 +581,7 @@ h6 {
   width: 1.618em;
 }
 
-#commento.commento-root {
-  background: #050505 !important;
-  font-size: 6rem !important;
-  /* .commento-card.commento-moderator::after,
+/* .commento-card.commento-moderator::after,
   #commento-submit-button-root,
   .commento-root.commento-card.commento-option-unsticky {
     background: #050505 !important;
@@ -597,6 +594,9 @@ h6 {
   .commento-error {
     color: #050505 !important;
   } */
+
+#commento.commento-root .commento-submit-button {
+  background: #050505 !important;
 }
 
 .textured-bg {
