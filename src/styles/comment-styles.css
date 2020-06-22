@@ -2,18 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+.commento-root {
+  background: #050505 !important;
+}
+
 .commento-moderation-notice {
-  color: #050505;
+  color: #050505 !important;
 }
 
 .commento-logo-container {
-  display: none;
+  display: none !important;
 }
 
 .commento-submit-button-root {
-  background: #050505;
+  background: #050505 !important;
 }
 
 .commento-error {
-  color: #050505;
+  color: #050505 !important;
+}
+
+#commento-comment-name-6736d1c77fd6fc83694acbc60a8f09962c031c298dc5c86a90c5f61bf3d5fab1 {
+  background: #050505 !important;
 }
