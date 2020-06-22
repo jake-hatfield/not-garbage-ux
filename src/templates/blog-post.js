@@ -28,18 +28,18 @@ const BlogPostTemplate = props => {
         console.log(failure)
         if (
           (data.result === "error") &
-          (success == true) &
-          (failure == false)
+          (success === true) &
+          (failure === false)
         ) {
           setSuccess(!success)
           setFailure(!failure)
           setRedundant(!redundant)
         } else if (
-          (data.result === "error") & (failure == false) ||
-          success == true
+          (data.result === "error") & (failure === false) ||
+          success === true
         ) {
           setFailure(!failure)
-        } else if ((data.result === "success") & (failure == true)) {
+        } else if ((data.result === "success") & (failure === true)) {
           setFailure(!failure)
           setSuccess(!success)
         } else if (data.result === "success") {
@@ -64,11 +64,6 @@ const BlogPostTemplate = props => {
 
   if ((percentage > 0.1) & (percentage < 0.4)) {
     sideBlog = true
-
-    // } else {
-    //   // sideBlog = false
-    //   console.log("true")
-    //   additionalContent = true
   } else if (percentage > 0.400001) {
     sideBlog = true
     additionalContent = true
@@ -95,9 +90,9 @@ const BlogPostTemplate = props => {
       />
 
       <section className="height-100" ref={ref}>
-        <Image
-          className="blog-hero-image"
-          fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
+        <img
+          className="mt-8 blog-hero-image"
+          src={post.frontmatter.featuredImage.publicURL}
         />
         <aside
           className={`${sideBlog ? `opacity-100` : `opacity-0`} 
@@ -114,7 +109,7 @@ const BlogPostTemplate = props => {
                     Interested in {topic}?
                   </h4>
                   <p className="mt-2 text-sm text-gray-600 leading-relaxed">
-                    There's tons more where that came from...
+                    There's a ton more where that came from...
                   </p>
                 </animated.div>
                 <animated.div style={secondaryFade}>
@@ -280,12 +275,7 @@ export const pageQuery = graphql`
         topic
         twitterTags
         featuredImage {
-          id
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
+          publicURL
         }
       }
     }

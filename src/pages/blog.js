@@ -45,31 +45,24 @@ const Blog = props => {
                   </aside>
                 </div>
                 <Link to={`blog${node.fields.slug}`}>
-                  <Image
-                    className="mt-4 h-48 lg:h-64 alt-border"
-                    fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
+                  <img
+                    className="mt-4 mb-0 mx-auto h-48 lg:h-64 alt-border"
+                    src={node.frontmatter.featuredImage.publicURL}
                   />
                 </Link>
               </div>
               <p
-                className="mt-3 mb-8 lg:mt-6 md:mb-0 leading-relaxed text-gray-900"
+                className="mt-3 leading-relaxed text-gray-900"
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
                 }}
               />
-              {/* <hr className="mt-4 hidden md:block rounded-lg border border-2 border-solid border-gray-200" /> */}
-              {/* <div className="mt-3 md:flex md:items-center md:justify-end">
-                <p className="mr-16 p-3 md:p-4 w-1/4 h-full flex items-center bg-gray-400 alt-border">
-                  <span className="mr-4 text-black-400 font-bold">3</span>{" "}
-                  comments
-                </p>
-                <Link
-                  to={`blog${node.fields.slug}`}
-                  className="p-3 md:p-4 inline-block w-full md:w-1/3 text-center bg-black-400 text-white text-lg alt-border focus:outline-none focus:shadow-outline"
-                >
-                  Read more
-                </Link>
-              </div> */}
+              <Link
+                to={`blog${node.fields.slug}`}
+                className="block w-full mt-4 p-3 md:p-4 bg-black-400 text-white text-lg text-center md:text-base alt-border focus:outline-none focus:shadow-outline"
+              >
+                Read more
+              </Link>
             </article>
           )
         })}
@@ -100,12 +93,7 @@ export const pageQuery = graphql`
             description
             author
             featuredImage {
-              id
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+              publicURL
             }
           }
         }

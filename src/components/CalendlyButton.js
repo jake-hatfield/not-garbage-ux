@@ -1,5 +1,4 @@
 import React from "react"
-import Close from "../../content/assets/close.svg"
 
 const CalendlyButton = ({ calendlyActive, setCalendlyActive }) => {
   return (

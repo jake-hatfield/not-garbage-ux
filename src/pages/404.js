@@ -15,7 +15,7 @@ class NotFoundPage extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="404: You Done Broke It" />
         <article className="height-alt container md:text-center md:flex md:items-center">
-          <div className="my-8 md:my-0 w-full">
+          <div className="my-8 w-full">
             <PageNotFound className="mx-auto block w-48 md:w-48 lg:w-1/2" />
             <h1 className="pt-8 md:pt-16 text-3xl md:text-4xl lg:text-5xl text-black-400 font-black">
               404: This Page Doesn't Exist

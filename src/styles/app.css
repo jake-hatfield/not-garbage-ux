@@ -539,8 +539,16 @@ h6 {
   }
 }
 
-.blog-hero-image {
-  max-height: 45vh;
+@media only screen and (max-width: 1279px) {
+  .blog-hero-image {
+    max-height: 25vh;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .blog-hero-image {
+    max-height: 35vh;
+  }
 }
 
 @media only screen and (min-width: 1024px) {

@@ -23,9 +23,6 @@ import Collaborate from "../../content/assets/collaborate.svg"
 import Call from "../../content/assets/call.svg"
 
 const IndexPage = ({ siteTitle }) => {
-  const closeCalendly = () => {
-    calendlyActive && setCalendlyActive(!calendlyActive)
-  }
   const [calendlyActive, setCalendlyActive] = useState(false)
 
   return (

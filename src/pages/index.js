@@ -29,7 +29,6 @@ const IndexPage = ({ siteTitle }) => {
               Incredible design that doesn't solve a problem is{" "}
               <span className="emphasis">garbage UX</span>
             </animated.h1>
-
             <h2 className="mt-8 text-xl text-black-400 leading-relaxed">
               Fact: Amazing illustrators, developers, and designers can still be
               awful at creating a good user experience.
@@ -55,7 +54,6 @@ const IndexPage = ({ siteTitle }) => {
                   Tactical user interface design
                 </h3>
               </div>
-
               <animated.div className="mt-3 flex items-center" style={fade}>
                 <IconCheck className="h-6 w-6 inline-block" />{" "}
                 <h3 className="ml-4 inline-block body-font">

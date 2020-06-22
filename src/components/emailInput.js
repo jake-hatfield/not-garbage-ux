@@ -15,18 +15,18 @@ const EmailInput = ({ centered, minimized }) => {
         console.log(failure)
         if (
           (data.result === "error") &
-          (success == true) &
-          (failure == false)
+          (success === true) &
+          (failure === false)
         ) {
           setSuccess(!success)
           setFailure(!failure)
           setRedundant(!redundant)
         } else if (
-          (data.result === "error") & (failure == false) ||
-          success == true
+          (data.result === "error") & (failure === false) ||
+          success === true
         ) {
           setFailure(!failure)
-        } else if ((data.result === "success") & (failure == true)) {
+        } else if ((data.result === "success") & (failure === true)) {
           setFailure(!failure)
           setSuccess(!success)
         } else if (data.result === "success") {
