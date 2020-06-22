@@ -9,7 +9,7 @@ import SocialShare from "../components/socialShare"
 import { useSpring, animated } from "react-spring"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 import { useScrollPercentage } from "react-scroll-percentage"
-import Comments from "../components/comments"
+import Commento from "../components/comments"
 
 const BlogPostTemplate = props => {
   const post = props.data.mdx
@@ -68,10 +68,6 @@ const BlogPostTemplate = props => {
   } else if (percentage > 0.400001) {
     sideBlog = true
     additionalContent = true
-  }
-
-  if (additionalContent === true) {
-    console.log("true")
   }
   const fade = useSpring({
     opacity: success || failure || redundant ? 1 : 0,
@@ -238,7 +234,7 @@ const BlogPostTemplate = props => {
           <hr />
         </article>
         <div className="container md:max-w-xl lg:max-w-2xl relative z-20">
-          <Comments />
+          <Commento id={post.frontmatter.postID} />
         </div>
       </section>
     </Layout>
@@ -281,6 +277,7 @@ export const pageQuery = graphql`
         featuredImage {
           publicURL
         }
+        postID
       }
     }
   }
