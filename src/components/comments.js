@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet"
 import React from "react"
-import styles from "../styles/app.css"
+// import styles from "../styles/app.css"
 
 export default class Comments extends React.Component {
   render() {
@@ -11,7 +11,7 @@ export default class Comments extends React.Component {
           <script
             defer
             src="https://cdn.commento.io/js/commento.js"
-            data-css-override={styles}
+            // data-css-override={styles}
           />
         </Helmet>
       </React.Fragment>
