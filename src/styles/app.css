@@ -29,6 +29,12 @@ body::-webkit-scrollbar-thumb {
   /* border: 3px solid var(--scrollbarBG); */
 }
 
+:root {
+  --primary: #050505;
+  --secondary: #edf2f7;
+  --text-color: #1a202c;
+}
+
 .header-font {
   font-family: Raleway !important;
 }
@@ -581,26 +587,94 @@ h6 {
   width: 1.618em;
 }
 
-/* .commento-card.commento-moderator::after,
-  #commento-submit-button-root,
-  .commento-root.commento-card.commento-option-unsticky {
-    background: #050505 !important;
-  }
-
-  .commento-root.commento-footer.commento-logo-container {
-    display: none !important;
-  }
-
-  .commento-error {
-    color: #050505 !important;
-  } */
-
-#commento.commento-root .commento-submit-button {
-  background: #050505 !important;
+#commento.commento-root * {
+  font-family: inherit;
+  text-transform: none;
+}
+#commento.commento-root a {
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -ms-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  text-decoration: none;
+  background-image: -webkit-linear-gradient(transparent 50%, #e2e8f0 0%);
+  background-image: -moz-linear-gradient(transparent 50%, #e2e8f0 0%);
+  background-image: -o-linear-gradient(transparent 50%, #e2e8f0 0%);
+  background-image: linear-gradient(transparent 50%, #e2e8f0 0%);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+}
+#commento.commento-root a:hover {
+  background-size: 100% 100%;
+}
+#commento.commento-root .commento-button {
+  padding: 0.4em 0.8em;
+  border: transparent 2px solid;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.15;
+}
+#commento.commento-root .commento-submit-button,
+#commento.commento-root .commento-github-button,
+#commento.commento-root .commento-email-button {
+  color: var(--text-color);
+  background-color: var(--primary);
 }
 
-#commento.commento-root #commento-footer .commento-logo-container {
-  display: none !important;
+#commento.commento-root .commento-login-text,
+#commento.commento-root .commento-logout {
+  display: inline-block;
+  color: var(--primary);
+  text-decoration: none;
+}
+#commento.commento-root .commento-login-text:hover,
+#commento.commento-root .commento-logout:hover {
+  color: var(--secondary);
+}
+#commento.commento-root .commento-mod-tools:before {
+  color: var(--text-color);
+}
+
+#commento.commento-root .commento-card .commento-body {
+  overflow-x: auto;
+}
+#commento.commento-root .commento-card .commento-body * {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+#commento.commento-root .commento-card .commento-moderator:after {
+  background: var(--primary);
+}
+#commento.commento-root .commento-card .commento-option-approve:hover,
+#commento.commento-root .commento-card .commento-option-remove:hover,
+#commento.commento-root .commento-card .commento-option-sticky:hover,
+#commento.commento-root .commento-card .commento-option-reply:hover,
+#commento.commento-root .commento-card .commento-option-edit:hover,
+#commento.commento-root .commento-card .commento-option-collapse:hover,
+#commento.commento-root .commento-card .commento-option-uncollapse:hover,
+#commento.commento-root .commento-card .commento-option-cancel:hover,
+#commento.commento-root .commento-card .commento-option-upvote:hover,
+#commento.commento-root .commento-card .commento-option-downvote:hover {
+  background-color: var(--secondary);
+}
+#commento.commento-root .commento-card .commento-option-remove,
+#commento.commento-root .commento-card .commento-option-unsticky,
+#commento.commento-root .commento-card .commento-option-approve {
+  background-color: var(--secondary);
+}
+#commento.commento-root .commento-card .commento-upvoted,
+#commento.commento-root .commento-card .commento-downvoted {
+  background-color: var(--secondary);
+}
+#commento.commento-root
+  .commento-round-check
+  input[type="checkbox"]:checked
+  + label:before {
+  border-color: var(--secondary);
+  background-color: var(--secondary);
 }
 
 .textured-bg {
