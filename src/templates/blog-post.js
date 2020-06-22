@@ -237,7 +237,9 @@ const BlogPostTemplate = props => {
           </ul>
           <hr />
         </article>
-        <Comments />
+        <div className="container md:max-w-xl lg:max-w-2xl relative z-20">
+          <Comments />
+        </div>
       </section>
     </Layout>
   )
