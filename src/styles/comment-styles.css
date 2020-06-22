@@ -5,3 +5,15 @@
 .commento-moderation-notice {
   color: #050505;
 }
+
+.commento-logo-container {
+  display: none;
+}
+
+.commento-submit-button-root {
+  background: #050505;
+}
+
+.commento-error {
+  color: #050505;
+}
