@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 // Helper to add scripts to our page
 const insertScript = (src, id, parentElement) => {
   const script = window.document.createElement("script")
-  script.async = true
+  script.defer = true
   script.src = src
   script.id = id
   parentElement.appendChild(script)
