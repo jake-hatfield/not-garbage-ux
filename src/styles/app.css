@@ -581,20 +581,14 @@ h6 {
   width: 1.618em;
 }
 
-#commento.commento-root {
+.commento-root .commento-card .commento-moderator::after,
+.commento-root .commento-submit-button,
+.commento-root .commento-card .commento-option-unsticky {
   background: #050505 !important;
 }
 
-.commento-moderation-notice {
-  color: #050505 !important;
-}
-
-.commento-logo-container {
+.commento-root .commento-footer .commento-logo-container {
   display: none !important;
-}
-
-#commento-submit-button-root {
-  background: #050505 !important;
 }
 
 .commento-error {
