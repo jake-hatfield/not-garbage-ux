@@ -596,15 +596,7 @@ h6 {
   width: 1.618em;
 }
 
-body .commento-root textarea {
-  background: red !important;
-}
-
-#commento.commento-root .commento-error-box {
-  background: red !important;
-}
-
-/* #commento.commento-root * {
+#commento.commento-root * {
   font-family: inherit;
   text-transform: none;
 }
@@ -693,7 +685,7 @@ body .commento-root textarea {
   + label:before {
   border-color: var(--secondary);
   background-color: var(--secondary);
-} */
+}
 
 .textured-bg {
   background-color: #050505;
