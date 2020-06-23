@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Image from "gatsby-image"
+import CommentCounter from "../components/commentCounter"
 
 const Blog = props => {
   const { data } = props
@@ -34,14 +34,19 @@ const Blog = props => {
                       {title}
                     </h2>
                   </Link>
-                  <aside className="mt-5 lg:mt-4 flex flex-wrap body-font font-light text-sm md:text-base text-gray-600">
-                    <address className="mr-2 mb-0 not-italic">
-                      {node.frontmatter.author}
-                    </address>
-                    <span className="mr-2">&#8226;</span>
-                    <time pubdate={node.frontmatter.date}>
-                      Updated: {node.frontmatter.date}
-                    </time>
+                  <aside className="mt-5 lg:mt-4 md:flex justify-between items-center body-font font-light text-sm md:text-base text-gray-600">
+                    <div className="flex flex-wrap">
+                      <address className="mr-2 mb-0 not-italic">
+                        {node.frontmatter.author}
+                      </address>
+                      <span className="mr-2">&#8226;</span>
+                      <time pubdate={node.frontmatter.date}>
+                        Updated: {node.frontmatter.date}
+                      </time>
+                    </div>
+                    <div className="mt-2 md:mt-0">
+                      <a href={`blog${node.frontmatter.path}#commento`}> </a>
+                    </div>
                   </aside>
                 </div>
                 <Link to={`blog${node.fields.slug}`}>
@@ -67,6 +72,7 @@ const Blog = props => {
           )
         })}
       </section>
+      <CommentCounter />
     </Layout>
   )
 }
@@ -95,6 +101,7 @@ export const pageQuery = graphql`
             featuredImage {
               publicURL
             }
+            path
           }
         }
       }
