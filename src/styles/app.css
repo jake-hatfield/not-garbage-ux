@@ -614,17 +614,24 @@ h6 {
 #commento.commento-root .commento-twitter-button,
 #commento.commento-root .commento-google-button,
 #commento.commento-root .commento-email-button {
-  background-color: var(--primary) !important;
+  background-color: var(--primary);
   color: #fff;
   font-size: 0.875rem;
   border-radius: 0.75rem;
+  @apply focus:outline-none focus:shadow-outline;
+}
+
+#commento.commento-root .commento-github-button,
+#commento.commento-root .commento-twitter-button,
+#commento.commento-root .commento-google-button {
+  background-color: #cbd5e0;
 }
 #commento.commento-root .commento-submit-button {
   background: #050505 !important;
 }
 #commento.commento-root .commento-login-box {
   border-radius: 0.75rem;
-  background: #fff;
+  background: #edf2f7;
 }
 #commento.commento-root .commento-login-link {
   color: var(--primary);
@@ -641,7 +648,6 @@ h6 {
 }
 #commento.commento-root .commento-email {
   border-radius: 0.75rem;
-  background-color: #edf2f7;
 }
 #commento.commento-root .commento-card .commento-body {
   overflow-x: auto;
