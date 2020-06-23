@@ -205,8 +205,8 @@ const BlogPostTemplate = props => {
               </MDXProvider>
             </section>
           </aside>
-          <ul className="py-8 text-3xl text-black-400 font-black">
-            {/* More Topics */}
+          {/* <ul className="py-8 text-3xl text-black-400 font-black">
+            More Topics
             <li>
               {previous && (
                 <Link
@@ -229,10 +229,10 @@ const BlogPostTemplate = props => {
                 </Link>
               )}
             </li>
-          </ul>
+          </ul> */}
           <hr />
         </article>
-        <div className="container md:max-w-xl lg:max-w-2xl relative z-20">
+        <div className="mb-8 container md:max-w-xl lg:max-w-2xl relative z-20">
           <Commento id={post.frontmatter.postID} />
         </div>
       </section>

@@ -606,7 +606,11 @@ h6 {
 #commento.commento-root .commento-button,
 #commento.commento-root .commento-email-button {
   font-weight: normal;
-  padding: 12px;
+}
+
+#commento.commento-root .commento-button:focus {
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
 }
 
 #commento.commento-root .commento-submit-button,
