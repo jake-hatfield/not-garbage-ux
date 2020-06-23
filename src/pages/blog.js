@@ -45,7 +45,7 @@ const Blog = props => {
                       </time>
                     </div>
                     <div className="mt-2 md:mt-0">
-                      <a href={`blog${node.frontmatter.path}#commento`}> </a>
+                      <a href={`${node.frontmatter.path}#commento`}> </a>
                     </div>
                   </aside>
                 </div>
