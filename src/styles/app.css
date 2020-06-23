@@ -596,7 +596,7 @@ h6 {
   width: 1.618em;
 }
 
-/* purgecss start ignore */
+/*! purgecss start ignore */
 
 #commento.commento-root * {
   font-family: inherit;
@@ -688,7 +688,7 @@ h6 {
   border-color: var(--secondary);
   background-color: var(--secondary);
 }
-/* purgecss end ignore */
+/*! purgecss end ignore */
 
 .textured-bg {
   background-color: #050505;
