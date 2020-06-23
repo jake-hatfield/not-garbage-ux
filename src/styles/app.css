@@ -623,14 +623,19 @@ h6 {
 #commento.commento-root .commento-github-button,
 #commento.commento-root .commento-twitter-button,
 #commento.commento-root .commento-google-button {
-  background-color: #cbd5e0;
+  background-color: #a0aec0;
+  padding: 6px 8px;
 }
+
 #commento.commento-root .commento-submit-button {
   background: #050505 !important;
 }
 #commento.commento-root .commento-login-box {
   border-radius: 0.75rem;
-  background: #edf2f7;
+  background: #f7fafc;
+}
+#commento.commento-root .commento-input {
+  border-radius: 0.75rem;
 }
 #commento.commento-root .commento-login-link {
   color: var(--primary);
