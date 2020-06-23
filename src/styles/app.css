@@ -95,6 +95,12 @@ h6 {
   @apply border-8 border-gray-600;
 }
 
+#blog-body > ul {
+  list-style: disc !important;
+  margin-left: 1.25rem !important;
+  margin-top: 1.25rem;
+}
+
 @media only screen and (max-width: 1199px) {
   .side-blog {
     display: none;
@@ -588,6 +594,10 @@ h6 {
   text-align: center;
   top: -0.236em;
   width: 1.618em;
+}
+
+body .commento-root textarea {
+  background: red;
 }
 
 /* #commento.commento-root * {
