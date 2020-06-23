@@ -631,6 +631,7 @@ h6 {
 #commento.commento-root .commento-github-button,
 #commento.commento-root .commento-email-button {
   background-color: var(--primary) !important;
+  border-radius: 0.75rem;
 }
 #commento.commento-root .commento-submit-button {
   background: #050505 !important;
@@ -641,10 +642,7 @@ h6 {
   color: var(--primary);
   text-decoration: none;
 }
-#commento.commento-root .commento-login-text:hover,
-#commento.commento-root .commento-logout:hover {
-  color: var(--secondary);
-}
+
 #commento.commento-root .commento-mod-tools:before {
   color: var(--text-color);
 }
@@ -670,7 +668,7 @@ h6 {
 #commento.commento-root .commento-card .commento-option-cancel:hover,
 #commento.commento-root .commento-card .commento-option-upvote:hover,
 #commento.commento-root .commento-card .commento-option-downvote:hover {
-  background-color: var(--secondary);
+  background-color: var(--primary);
 }
 #commento.commento-root .commento-card .commento-option-remove,
 #commento.commento-root .commento-card .commento-option-unsticky,
@@ -685,8 +683,12 @@ h6 {
   .commento-round-check
   input[type="checkbox"]:checked
   + label:before {
-  border-color: var(--secondary);
-  background-color: var(--secondary);
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+#commento.commento-root .commento-logo-container {
+  display: none;
 }
 /*! purgecss end ignore */
 
