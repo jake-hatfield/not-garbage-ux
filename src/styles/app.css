@@ -54,6 +54,8 @@ body::-webkit-scrollbar-thumb {
   height: 24rem;
 }
 
+/*! purgecss start ignore */
+
 @media only screen and (max-width: 640px) {
   .full-width {
     width: 100vw;
@@ -75,6 +77,8 @@ body::-webkit-scrollbar-thumb {
   margin-left: calc(-50vw - 0px);
   margin-right: calc(-50vw + 0px);
 }
+
+/*! purgecss end ignore */
 
 #blog-body > h2 {
   @apply mt-8 header-font text-2xl font-bold;
@@ -118,7 +122,6 @@ h6 {
   margin: 20px 0px 0px 0px !important;
   @apply py-4 pl-4 pr-2 border-l-4 border-black-400 bg-gray-300 font-black text-base !important;
 }
-
 /*! purgecss end ignore */
 
 @media only screen and (max-width: 1199px) {
