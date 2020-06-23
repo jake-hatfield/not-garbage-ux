@@ -29,7 +29,8 @@ const designTips = ({
           </p>
           <EmailInput centered={true} />
           <p className="mt-4 body-font text-base md:text-lg text-gray-600">
-            No freebies, limited time offers, or spam - just one article a week.
+            No freebies, limited time offers, or spam - just high-quality case
+            studies.
           </p>
           <div className="text-center">
             <button

@@ -98,11 +98,11 @@ const BlogPostTemplate = props => {
         >
           <div className="flex justify-center">
             <div className="alt-container w-full">
-              <div className="side-blog-w relative">
+              <div className="p-4 side-blog-w relative z-40 bg-white alt-border">
                 <h2 className="text-lg text-gray-700 font-bold">
                   Not Garbage UX
                 </h2>
-                <animated.div style={primaryFade} className="absolute">
+                <animated.div style={primaryFade} className="absolute pr-4">
                   <h4 className="mt-2 body-font text-sm text-gray-600 leading-relaxed">
                     Interested in {topic}?
                   </h4>
@@ -248,6 +248,10 @@ const BlogPostTemplate = props => {
             </p>
             <p className="mt-4">Subscribe so you don't miss out on anything.</p>
             <EmailInput inverted={true} />
+            <p className="mt-4">
+              No freebies, limited time offers, or spam - just high-quality case
+              studies.
+            </p>
           </div>
         </section>
       </section>
