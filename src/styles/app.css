@@ -624,7 +624,9 @@ h6 {
 #commento.commento-root .commento-email-button {
   background-color: var(--primary) !important;
 }
-
+#commento.commento-root .commento-submit-button {
+  background: #050505 !important;
+}
 #commento.commento-root .commento-login-text,
 #commento.commento-root .commento-logout {
   display: inline-block;
