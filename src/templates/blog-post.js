@@ -232,19 +232,24 @@ const BlogPostTemplate = props => {
               )}
             </li>
           </ul> */}
-          <hr />
         </article>
-        <section className="w-full bg-black-200 textured-bg">
-          <div className="mt-8 py-8 container md:max-w-xl lg:max-w-2xl">
-            <h3 className="text-2xl md:text-3xl text-white font-black">
-              Hello
-            </h3>
-            <EmailInput inverted={true} />
-          </div>
-        </section>
         <div className="my-8 container md:max-w-xl lg:max-w-2xl relative z-20">
           <Commento id={post.frontmatter.postID} />
         </div>
+        <section className="w-full bg-gray-200">
+          <div className="mt-8 py-8 container md:max-w-xl lg:max-w-2xl">
+            <h3 className="text-2xl md:text-3xl text-black-400 font-black">
+              Subscribe to the NGUX newsletter
+            </h3>
+            <p className="mt-4">
+              If you got anything out of this article about{" "}
+              {post.frontmatter.topic}, there's more awesome content where that
+              came from.
+            </p>
+            <p className="mt-4">Subscribe so you don't miss out on anything.</p>
+            <EmailInput inverted={true} />
+          </div>
+        </section>
       </section>
     </Layout>
   )

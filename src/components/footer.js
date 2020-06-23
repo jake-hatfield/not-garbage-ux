@@ -6,7 +6,7 @@ import DribbleIcon from "../../content/assets/dribble-icon.svg"
 
 const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
   return (
-    <nav className="pt-16 pb-6 w-full textured-bg header-font text-white">
+    <nav className="pt-16 pb-6 w-full textured-bg bg-black-400 header-font text-white">
       <div className="container">
         <div className="md:flex md:justify-between md:items-start">
           <div>

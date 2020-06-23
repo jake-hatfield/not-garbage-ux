@@ -86,9 +86,7 @@ const EmailInput = ({ centered, inverted }) => {
         />
         <button
           type="submit"
-          className={`${
-            inverted ? `bg-gray-300 text-black-400` : `bg-black-400 text-white`
-          } mt-2 md:mt-0 p-3 md:p-4 w-full md:w-auto md:absolute right-0 text-lg md:text-base alt-border focus:outline-none focus:shadow-outline`}
+          className={`mt-2 md:mt-0 p-3 md:p-4 w-full md:w-auto md:absolute right-0 text-lg md:text-base bg-black-400 text-white alt-border focus:outline-none focus:shadow-outline`}
         >
           Learn not garbage UX
         </button>

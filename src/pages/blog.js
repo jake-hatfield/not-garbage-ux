@@ -70,6 +70,12 @@ const Blog = props => {
                   __html: node.frontmatter.description || node.excerpt,
                 }}
               />
+              <p
+                className="mt-3 leading-relaxed text-gray-900"
+                dangerouslySetInnerHTML={{
+                  __html: node.frontmatter.bulletDescription,
+                }}
+              />
               <Link
                 to={`blog${node.fields.slug}`}
                 className="block w-full mt-4 p-3 md:p-4 bg-black-400 text-white text-lg text-center md:text-base alt-border focus:outline-none focus:shadow-outline"
@@ -111,6 +117,7 @@ export const pageQuery = graphql`
             }
             path
             readTime
+            bulletDescription
           }
         }
       }
