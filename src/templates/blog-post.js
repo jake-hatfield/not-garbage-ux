@@ -232,7 +232,7 @@ const BlogPostTemplate = props => {
           </ul> */}
           <hr />
         </article>
-        <div className="mb-8 container md:max-w-xl lg:max-w-2xl relative z-20">
+        <div className="my-8 container md:max-w-xl lg:max-w-2xl relative z-20">
           <Commento id={post.frontmatter.postID} />
         </div>
       </section>

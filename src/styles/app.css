@@ -683,7 +683,7 @@ h6 {
 #commento.commento-root .commento-card .commento-option-remove,
 #commento.commento-root .commento-card .commento-option-unsticky,
 #commento.commento-root .commento-card .commento-option-approve {
-  background-color: var(--secondary);
+  background-color: var(--primary);
 }
 #commento.commento-root .commento-card .commento-upvoted,
 #commento.commento-root .commento-card .commento-downvoted {
