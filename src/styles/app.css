@@ -597,7 +597,11 @@ h6 {
 }
 
 body .commento-root textarea {
-  background: red;
+  background: red !important;
+}
+
+#commento.commento-root .commento-error-box {
+  background: red !important;
 }
 
 /* #commento.commento-root * {
