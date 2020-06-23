@@ -10,7 +10,6 @@ import { useSpring, animated } from "react-spring"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 import { useScrollPercentage } from "react-scroll-percentage"
 import Commento from "../components/comments"
-
 const BlogPostTemplate = props => {
   const post = props.data.mdx
   const siteTitle = props.data.site.siteMetadata.title
