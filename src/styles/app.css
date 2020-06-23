@@ -602,10 +602,17 @@ h6 {
   font-family: inherit;
   text-transform: none;
 }
+
+#commento.commento-root .commento-button,
+#commento.commento-root .commento-email-button {
+  font-weight: normal;
+  padding: 12px;
+}
+
 #commento.commento-root .commento-submit-button,
 #commento.commento-root .commento-github-button,
-#commento.commento-root .comment-twitter-button,
-#commento.commento-root .comment-google-button,
+#commento.commento-root .commento-twitter-button,
+#commento.commento-root .commento-google-button,
 #commento.commento-root .commento-email-button {
   background-color: var(--primary) !important;
   color: #fff;
@@ -616,7 +623,8 @@ h6 {
   background: #050505 !important;
 }
 #commento.commento-root .commento-login-box {
-  border-radius: 0;
+  border-radius: 0.75rem;
+  background: #fff;
 }
 #commento.commento-root .commento-login-link {
   color: var(--primary);
@@ -631,7 +639,10 @@ h6 {
 #commento.commento-root .commento-mod-tools:before {
   color: var(--text-color);
 }
-
+#commento.commento-root .commento-email {
+  border-radius: 0.75rem;
+  background-color: #edf2f7;
+}
 #commento.commento-root .commento-card .commento-body {
   overflow-x: auto;
 }
