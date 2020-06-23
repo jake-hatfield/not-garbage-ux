@@ -10,6 +10,8 @@ import { useSpring, animated } from "react-spring"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 import { useScrollPercentage } from "react-scroll-percentage"
 import Commento from "../components/comments"
+import EmailInput from "../components/emailInput"
+
 const BlogPostTemplate = props => {
   const post = props.data.mdx
   const siteTitle = props.data.site.siteMetadata.title
@@ -64,7 +66,7 @@ const BlogPostTemplate = props => {
 
   if ((percentage > 0.1) & (percentage < 0.4)) {
     sideBlog = true
-  } else if (percentage > 0.400001) {
+  } else if ((percentage > 0.400001) & (percentage < 0.95)) {
     sideBlog = true
     additionalContent = true
   }
@@ -232,6 +234,14 @@ const BlogPostTemplate = props => {
           </ul> */}
           <hr />
         </article>
+        <section className="w-full bg-black-200 textured-bg">
+          <div className="mt-8 py-8 container md:max-w-xl lg:max-w-2xl">
+            <h3 className="text-2xl md:text-3xl text-white font-black">
+              Hello
+            </h3>
+            <EmailInput inverted={true} />
+          </div>
+        </section>
         <div className="my-8 container md:max-w-xl lg:max-w-2xl relative z-20">
           <Commento id={post.frontmatter.postID} />
         </div>

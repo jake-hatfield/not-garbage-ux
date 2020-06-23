@@ -26,7 +26,11 @@ const Blog = props => {
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
-            <article key={node.fields.slug} className="mb-12 lg:mb-24">
+            <article
+              key={node.fields.slug}
+              className="mb-12 lg:mb-24"
+              id="blog-article"
+            >
               <div className="flex flex-col flex-col-reverse lg:flex-col">
                 <div>
                   <Link to={`blog${node.fields.slug}`} className="alt-link">
@@ -45,6 +49,10 @@ const Blog = props => {
                       </time>
                     </div>
                     <div className="mt-2 md:mt-0">
+                      <span className="mr-2">
+                        {node.frontmatter.readTime} min read
+                      </span>
+                      <span className="mr-2">&#8226;</span>
                       <a href={`${node.frontmatter.path}#commento`}> </a>
                     </div>
                   </aside>
@@ -102,6 +110,7 @@ export const pageQuery = graphql`
               publicURL
             }
             path
+            readTime
           }
         }
       }

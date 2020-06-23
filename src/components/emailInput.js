@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 import { animated, useSpring } from "react-spring"
 
-const EmailInput = ({ centered, minimized }) => {
+const EmailInput = ({ centered, inverted }) => {
   const [email, setEmail] = useState("")
   const [success, setSuccess] = useState(false)
   const [failure, setFailure] = useState(false)
@@ -80,11 +80,15 @@ const EmailInput = ({ centered, minimized }) => {
           name="email"
           type="text"
           required
-          className="p-3 md:p-4 w-full bg-gray-200 alt-border focus:outline-none focus:shadow-outline"
+          className={`${
+            inverted ? `bg-white` : `bg-gray-200`
+          } p-3 md:p-4 w-full alt-border focus:outline-none focus:shadow-outline`}
         />
         <button
           type="submit"
-          className="mt-2 md:mt-0 p-3 md:p-4 w-full md:w-auto md:absolute right-0 bg-black-400 text-white text-lg md:text-base alt-border focus:outline-none focus:shadow-outline"
+          className={`${
+            inverted ? `bg-gray-300 text-black-400` : `bg-black-400 text-white`
+          } mt-2 md:mt-0 p-3 md:p-4 w-full md:w-auto md:absolute right-0 text-lg md:text-base alt-border focus:outline-none focus:shadow-outline`}
         >
           Learn not garbage UX
         </button>
