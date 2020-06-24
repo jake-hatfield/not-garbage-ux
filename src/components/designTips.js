@@ -24,8 +24,8 @@ const designTips = ({
             Want the inside scoop?
           </h3>
           <p className="mt-4 body-font text-base md:text-lg lg:text-xl text-gray-600">
-            We make it rain on your inbox with weekly UX tips and case studies
-            not found on the blog. Ya have FOMO yet?
+            We make it rain on your inbox with UX tips and case studies not
+            found on the blog. Ya have FOMO yet?
           </p>
           <EmailInput centered={true} />
           <p className="mt-4 body-font text-base md:text-lg text-gray-600">
