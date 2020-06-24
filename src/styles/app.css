@@ -116,6 +116,12 @@ h6 {
   margin-left: 1.25rem !important;
   margin-top: 1.25rem;
 }
+
+#blog-body > ol {
+  list-style: decimal !important;
+  margin-left: 1.25rem !important;
+  margin-top: 1.25rem;
+}
 /*! purgecss start ignore */
 
 #blog-body > blockquote {
@@ -630,7 +636,7 @@ h6 {
 #commento.commento-root .commento-twitter-button,
 #commento.commento-root .commento-google-button,
 #commento.commento-root .commento-email-button {
-  background-color: var(--primary);
+  background-color: var(--primary) !important;
   color: #fff;
   font-size: 0.875rem;
   border-radius: 0.75rem;
@@ -719,6 +725,10 @@ h6 {
 
 #commento.commento-root .commento-sort-policy-button-selected {
   color: var(--primary);
+}
+
+#commento.commento-root .commento-textarea-container {
+  margin: 0px;
 }
 /*! purgecss end ignore */
 
