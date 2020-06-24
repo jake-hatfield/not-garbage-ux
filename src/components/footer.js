@@ -86,7 +86,7 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
             © {new Date().getFullYear()} {siteTitle} | Be chill and don't steal
           </div>
           <div className="mt-2 md:mt-0">
-            <a href="sitemap.xml">Sitemap</a>
+            <a href="https://notgarbageux.com/sitemap.xml">Sitemap</a>
             <Link to={`/privacy`} className="ml-12 md:ml-24 lg:ml-32">
               Privacy
             </Link>
