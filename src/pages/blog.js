@@ -81,7 +81,7 @@ const Blog = props => {
               />
               <Link
                 to={`blog${node.fields.slug}`}
-                className="block w-full mt-4 p-3 md:p-4 bg-black-400 text-white text-lg text-center md:text-base alt-border focus:outline-none focus:shadow-outline"
+                className="block w-full mt-6 p-3 md:p-4 bg-black-400 text-white text-lg text-center md:text-base alt-border focus:outline-none focus:shadow-outline"
               >
                 Read more
               </Link>
