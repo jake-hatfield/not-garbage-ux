@@ -111,13 +111,13 @@ h6 {
 }
 
 #blog-body > ul,
-#blog-article > p > ul {
+#blog-article > div > ul {
   list-style: disc !important;
   margin-left: 1.25rem !important;
   margin-top: 1.25rem;
 }
-
 /*! purgecss start ignore */
+
 #blog-body > blockquote {
   margin: 20px 0px 0px 0px !important;
   @apply py-4 pl-4 pr-2 border-l-4 border-black-400 bg-gray-300 font-black text-base !important;

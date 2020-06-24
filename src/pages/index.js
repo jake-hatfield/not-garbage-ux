@@ -18,7 +18,7 @@ const IndexPage = ({ siteTitle }) => {
         description="Not Garbage UX is a resource for designers and developers who are trying to create projects that don't suck. We write up weekly UX tips and strategies."
         keywords={[`UX tips`, `UX design`, `user experience`, `not garbage ux`]}
       />
-      <section className="height-alt my-8 md:my-16 w-full md:flex md:items-center lg:flex-col lg:justify-center lg:items-start lg:relative overflow-x-hidden">
+      <section className="height-alt my-8 md:my-16 w-full md:flex md:flex-row md:items-center lg:flex-col lg:justify-center lg:items-start lg:relative overflow-x-hidden">
         <header className="container relative z-0">
           <HeroImage className="mx-auto w-3/4 md:w-1/2 hero-image" />
           <section className="mx-auto lg:m-0 md:max-w-lg lg:max-w-xl">

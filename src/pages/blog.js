@@ -70,7 +70,10 @@ const Blog = props => {
                   __html: node.frontmatter.description || node.excerpt,
                 }}
               />
-              <p
+              <p className="mt-3 leading-relaxed text-gray-900">
+                You'll learn:
+              </p>
+              <div
                 className="mt-3 leading-relaxed text-gray-900"
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.bulletDescription,

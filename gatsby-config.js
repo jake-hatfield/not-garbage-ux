@@ -24,14 +24,21 @@ module.exports = {
         exclude: [`/email-thanks/`],
       },
     },
-
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         printRejected: true,
         develop: false,
         tailwind: true,
-        whitelist: ["commento-root", "commento"], // Don't remove this selector
+        whitelist: [
+          "whitelist",
+          "md:flex-row",
+          "md:w-64",
+          "uppercase",
+          "lg:text-base",
+          "text-sm",
+          "lg:text-3xl",
+        ], // Don't remove this selector
         // ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/'], // Ignore files/folders
         // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
       },
