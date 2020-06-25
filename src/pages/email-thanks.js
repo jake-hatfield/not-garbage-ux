@@ -21,7 +21,7 @@ const EmailThanks = ({ siteTitle }) => {
           overlords. Strap in.
         </p>
         <p className="mt-5">
-          I put a lot of time and energy into these weekly emails to condense
+          I put a lot of time and energy into these case studies to condense
           advanced UX design principles into digestible pieces.
         </p>
         <p className="mt-5">
@@ -79,13 +79,13 @@ const EmailThanks = ({ siteTitle }) => {
           that's working, try it out.
         </p>
         <p className="mt-5">
-          By the way, the content in my weekly UX emails isn't shared anywhere
-          else, but it's just potatoes compared to my in-depth writing and
-          videos. I can only educate so much via email, so if you want the real
-          meat be sure to check out the supporting content that goes along with
-          each topic.
+          By the way, the content in my UX emails isn't shared anywhere else,
+          but it's just potatoes compared to my in-depth writing and videos. I
+          can only educate so much via email, so if you want the real meat be
+          sure to check out the supporting content that goes along with each
+          topic.
         </p>
-        <p className="mt-5">That's all for now. See ya on Tuesday.</p>
+        <p className="mt-5">That's all for now. Talk soon.</p>
         <p className="mt-5">Jake</p>
       </section>
     </Layout>
