@@ -6,7 +6,7 @@ import DribbleIcon from "../../content/assets/dribble-icon.svg"
 
 const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
   return (
-    <nav className="pt-16 pb-6 w-full textured-bg bg-black-400 header-font text-white">
+    <section className="pt-16 pb-6 w-full textured-bg bg-black-400 header-font text-white">
       <div className="container">
         <div className="md:flex md:justify-between md:items-start">
           <div>
@@ -18,7 +18,7 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
               make products better.
             </h2>
           </div>
-          <div className="md:flex md:justify-around md:items-start">
+          <nav className="md:flex md:justify-around md:items-start">
             <div className="mt-8 md:mt-0 flex">
               <div className="mr-16 lg:mr-32">
                 <h4 className="font-bold text-xl">Company</h4>
@@ -79,7 +79,7 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
                 </div>
               </div>
             </div>
-          </div>
+          </nav>
         </div>
         <footer className="mt-8 md:mt-6 md:flex md:justify-between md:items-center text-lg text-black-200">
           <div>
@@ -93,7 +93,7 @@ const footer = ({ siteTitle, designTipsOpen, setDesignTipsOpen }) => {
           </div>
         </footer>
       </div>
-    </nav>
+    </section>
   )
 }
 
