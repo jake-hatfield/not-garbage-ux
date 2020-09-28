@@ -88,6 +88,14 @@ const IndexPage = ({ siteTitle }) => {
               company for Amazon sellers a year later. Drinking from a fire hose
               along the way, we scaled it and sold in 18 months.
             </p>
+            <p className="mt-4 lg:mt-8 lg:max-w-lg text-base leading-loose">
+              Lately I've been working on another project called{" "}
+              <a href="https://leadgeek.io/" target="_blank" rel="noopener">
+                LeadGeek
+              </a>
+              , which I am enjoying as I learn more of the technical side of
+              things.
+            </p>
             <p className="mt-4 lg:max-w-lg text-base leading-loose">
               I decided to launch Not Garbage UX as a way to help designers and
               developers with the technical aspects of building successful

@@ -48,3 +48,6 @@ module.exports = {
     },
   ],
 }
+
+
+// See https://tailwindcss.com/docs/configuration for details

@@ -29,9 +29,10 @@ const contact = () => {
           <div className="mt-8 lg:mt-0 p-4 md:py-6 md:px-8 lg:py-12 lg:px-16 w-full lg:w-7/12 z-10 bg-white border-t-8 border-black-400 double-shadow">
             <form
               name="contact"
-              method="post"
+              method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
+              action="/contact-success"
             >
               <input type="hidden" name="contact-page" value="contact" />
               <div>
