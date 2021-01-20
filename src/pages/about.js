@@ -84,7 +84,7 @@ const IndexPage = ({ siteTitle }) => {
             </div>
             <p className="mt-4 lg:mt-8 lg:max-w-lg text-base leading-loose">
               I graduated in 2016 from Texas A&M with a B.S. in Biology and
-              quickly lit that tuition on fire by instead co-founding a software
+              quickly lit that tuition on fire by instead working on a software
               company for Amazon sellers a year later. Drinking from a fire hose
               along the way, we scaled it and sold in 18 months.
             </p>
